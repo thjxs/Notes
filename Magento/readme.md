@@ -23,3 +23,9 @@ php -v
 5.6  7.0
 
 mysql ^5.6
+
+Encryption Key:
+2f87105606cd51e9a9b75a4d92ba28f7
+
+# 切换 magento2 系统模式
+magento deploy:mode:set [mode] [-s|--skip-compilation]
