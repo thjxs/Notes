@@ -29,3 +29,7 @@ Encryption Key:
 
 # 切换 magento2 系统模式
 magento deploy:mode:set [mode] [-s|--skip-compilation]
+
+# admin
+-u admin
+-p thjjian1`
