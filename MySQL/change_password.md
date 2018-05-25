@@ -8,3 +8,13 @@ add: skip-grant-tables
 * update mysql.user set authentication_string=password('root') where user='root';
 
 * remove my.cnf changes and restart service
+
+# Ubuntu
+
+* cat /etc/mysql/debian.cnf
+
+* try 'debian-sys-maint' this user
+
+* then update authentication_string
+
+* sudo mysql -u root -p
