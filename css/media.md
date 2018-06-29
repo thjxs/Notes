@@ -9,8 +9,27 @@
 大屏幕 1200px
 
 # media query syntax
-@media screen and (min-width: 320px)
+@media not|only mediatype and (expressions) {
+	//css
+}
 
+# media type
+all print screen speech
+
+# demo
+```
+@media screen and (min-width: 480px) {
+	body {
+		background-color: lightgreen;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	#leftsidebar { width: 200px; float: left; }
+	#main { margin-left: 216px; }
+}
+
+```
 # media queries in link tags
 <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation: portrait)">

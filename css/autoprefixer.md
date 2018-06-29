@@ -1,3 +1,3 @@
-# sublime autoprefixer
+# sublime plugin 
 
-自动添加兼容前缀
+autoprefixer > 自动添加兼容前缀
