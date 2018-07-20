@@ -11,3 +11,31 @@ do
     mv $files $filename
 done
 ```
+# 读取文件的指定行数并输出到另一个文件
+```
+#!/bin/bash
+file="/etc/passwd"
+# 将fd3的内容写入/tmp/mypasswd中
+exec 3>/tmp/mypasswd
+for i in 2 4 6 8 10 13 15;do
+line=`head -$i $file | tail -1`
+echo "$line"
+# 将内容写入 fd3
+echo "$line" >&3
+done
+# 关闭标指输出
+exec 3>&-
+```
+# 创建目录 文件 列出文件或目录
+```
+#!/bin/bash
+date
+mkdir -pv /tmp/lstest
+cd /tmp/lstest
+mkdir a1d b56e 6test
+touch xy x2y 732
+# 列出以 a | x | 6 开头的文件
+ls [ax6]*
+# 列出 字母跟数字开头的文件
+ls [[:alpha:]][[:digit:]]*
+```
