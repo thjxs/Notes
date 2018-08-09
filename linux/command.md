@@ -39,3 +39,11 @@ ls [ax6]*
 # 列出 字母跟数字开头的文件
 ls [[:alpha:]][[:digit:]]*
 ```
+# cp
+```
+# 同一个目录复制多个文件
+cp path/{f1,dir1,f2,dir2} path/target
+
+# 共同前缀
+cp /path/pre{1..3} path/target
+```
