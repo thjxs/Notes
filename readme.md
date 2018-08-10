@@ -1,12 +1,19 @@
-# It is my learning notes
+## Notes
 
-# contains css js
+## Tool
+[RegExr](https://regexr.com/)
 
 
-magento account
-```
-tanhongjianx@163.com
-Magentojian1`
-```
-# media query usage ???
+## Blog
 
+[ben frain](https://benfrain.com/blog/)
+
+### PHP
+[laruence](http://www.laruence.com/)
+
+## DOC
+[W3C](https://www.w3.org/)
+[git](https://git-scm.com/book/zh/)
+
+## News
+[Hacker News](https://news.ycombinator.com/)
