@@ -47,3 +47,12 @@ cp path/{f1,dir1,f2,dir2} path/target
 # 共同前缀
 cp /path/pre{1..3} path/target
 ```
+
+# info
+```
+df -h
+free
+cat /proc/cpuinfo
+ps -ef | grep process  # pid 
+netstat -tunlp | grep 22
+```
