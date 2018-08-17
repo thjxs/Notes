@@ -26,3 +26,52 @@ ${string//substring/replacement} # 使用 replacement 替换所有的 substring
 ```
 sed -i 's/string/replacement/g' path/to/file
 ```
+
+## cut - remove sections from each line of files
+```
+#    input field:field2:field3
+#    out field
+cut -d: -f1 < /path/to/files | sort
+```
+
+## diff - compare files line by line
+```
+# 比较两个文件，把结果输出到 diffline 后台执行
+diff file.txt file.txt.old > diffline &
+```
+
+## sort
+```
+#!/bin/bash
+#  highest filename [howmany]
+
+filename=$1
+howmany=${2:-10}
+sort -nr $filename | head -$howmany
+```
+
+## compress
+```
+#!/bin/bash
+filepath=$1
+cd $filepath
+files=$(find -iregex ".*\.\(jpg\|png\)")
+echo "Working path" $filepath
+echo $files
+read -p 'The above files will be compressed(y/N)' choice
+if [ "${choice:-y}" != "y" ]; then
+    echo bye!
+    exit
+fi
+pathto='./compressed/'
+if [ ! -d $pathto ]; then
+    mkdir $pathto
+fi
+for file in $files
+do
+    if [ ! -d ${pathto}${file%\/*} ]; then
+        mkdir -p ${pathto}${file%\/*}
+    fi
+    guetzli --quality 85 --verbose $file ${pathto}${file#\.\/}
+done
+```
