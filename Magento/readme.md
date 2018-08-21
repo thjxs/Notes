@@ -24,8 +24,15 @@ php -v
 
 mysql ^5.6
 
-Encryption Key:
-2f87105606cd51e9a9b75a4d92ba28f7
+# filepremission
+```
+find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} \; && 
+find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} \; && 
+chmod u+x bin/magento
+```
+
+# env config
+follow the sample file
 
 # 切换 magento2 系统模式
 magento deploy:mode:set [mode] [-s|--skip-compilation]
