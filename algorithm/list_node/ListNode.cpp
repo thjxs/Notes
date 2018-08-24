@@ -19,6 +19,7 @@ public:
             res = tmp;
             tmp = head;
         }
+        return res;
     }
     ListNode* middleNode(ListNode* head) {
         ListNode* fast = head;
@@ -28,5 +29,28 @@ public:
             slow = slow->next;
         }
         return slow;
+    }
+    bool isPalindromePro(ListNode* head) {
+        if (head == NULL || head->next == NULL)
+        {
+            return true;
+        }
+        ListNode* fast = head;
+        ListNode* slow = head;
+        while (fast->next != NULL && fast->next->next != NULL) {
+            fast = fast->next->next;
+            slow = slow->next;
+        }
+        slow->next = reverseList(slow->next);
+        slow = slow->next;
+        while(slow != NULL) {
+            if (head->val != slow->val)
+            {
+                return false;
+            }
+            head = head->next;
+            slow = slow->next;
+        }
+        return true;
     }
 };
