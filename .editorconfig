@@ -12,9 +12,3 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
-
-[*.html]
-indent_size = 2
-
-[*.py]
-indent_size = 4
