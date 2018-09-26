@@ -18,7 +18,7 @@ etc
 ```
 mkdir /opt/git/project.git
 cd /opt/git/project.git
-git init --bare
+git init --bare --shared
 ```
 
 ## 限制 git 登录
