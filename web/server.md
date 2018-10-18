@@ -5,10 +5,11 @@
 > [nginx](http://nginx.org/en/linux_packages.html#stable)
 
 ```
-$ sudo rpm --import http://nginx.org/keys/nginx_signing.key
-$ sudo rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
-$ sudo yum install nginx 
+rpm --import http://nginx.org/keys/nginx_signing.key
+rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+yum install nginx 
 ```
+
 
 ## PHP
 
