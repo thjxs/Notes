@@ -1,8 +1,8 @@
 # database backup
 1. `php artisan make:comman BackupDatabase`
 2. mod command file
-```
-<?php
+
+```php
 
 namespace App\Console\Commands;
 
@@ -43,7 +43,8 @@ class BackupDatabase extends Command
     }
 }
 ```
+
 3. add this in Kernel.php
-```
+```php
 $sehedule->command('db:backup')->mondays()->at('23:00');
 ```

@@ -3,7 +3,7 @@
 ` find ./ -name "*.log" -exec rm -rf {} \; `
 
 # 批量修改文件名
-```
+```bash
 #!/bin/bash
 for files in $(find ./ -iname "*.jpg")
 do
@@ -12,7 +12,7 @@ do
 done
 ```
 # 读取文件的指定行数并输出到另一个文件
-```
+```bash
 #!/bin/bash
 file="/etc/passwd"
 # 将fd3的内容写入/tmp/mypasswd中
@@ -27,7 +27,7 @@ done
 exec 3>&-
 ```
 # 创建目录 文件 列出文件或目录
-```
+```bash
 #!/bin/bash
 date
 mkdir -pv /tmp/lstest
@@ -40,7 +40,7 @@ ls [ax6]*
 ls [[:alpha:]][[:digit:]]*
 ```
 # cp
-```
+```sh
 # 同一个目录复制多个文件
 cp path/{f1,dir1,f2,dir2} path/target
 
@@ -49,7 +49,7 @@ cp /path/pre{1..3} path/target
 ```
 
 # info
-```
+```sh
 df -h
 free
 cat /proc/cpuinfo

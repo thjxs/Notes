@@ -29,10 +29,8 @@ Laravel 可以定义四种不同类型的调度任务: Closure command job exec.
 这里使用了 command
 1. 在 `App\Console\Kernel` 的 schedule 方法里定义调度任务
 
-```
-.
-.
-.
+```php
+
 protected function schedule(Schedule $schedule)
 {
 	// 每分钟执行执行一次 ehoc:string
@@ -45,10 +43,8 @@ protected function schedule(Schedule $schedule)
 ` php artisan make:command EchoString --command=echo:string `
 
 接着在 `app/Console/Commands/EchoString.php` handle 方法里添加代码
-```
-.
-.
-.
+```php
+
 class EchoString extends Command
 {
 	// 在定义任务调度时使用了该签名

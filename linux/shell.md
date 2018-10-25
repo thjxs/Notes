@@ -27,13 +27,13 @@ arguments value
 1 表示标准输出
 2 表示标准错误输出
 ```
-```
+```sh
 command >/dev/null 2>&1  # 将 1 重定向到 /dev/null, 再将 2 重定向到 1，两者都输出到 /dev/null
 command 2>&1 >/dev/null  # 将 2 重定向到 1， 将 1 重定向到 /dev/null
 ```
 
 ## shell 字符串操作
-```
+```sh
 ${#string} # 字符长度
 ${string:position} # 从 $position 开始提取子串
 ${string:position:length} # 从 $position 开始，提取长度为 $length 的子串
@@ -45,25 +45,25 @@ ${string/substring/replacement} # 使用 replacement 替换第一个匹配的 su
 ${string//substring/replacement} # 使用 replacement 替换所有的 substring
 ```
 ## sed 替换文本内容
-```
+```sh
 sed -i 's/string/replacement/g' path/to/file
 ```
 
 ## cut - remove sections from each line of files
-```
+```sh
 #    input field:field2:field3
 #    out field
 cut -d: -f1 < /path/to/files | sort
 ```
 
 ## diff - compare files line by line
-```
+```sh
 # 比较两个文件，把结果输出到 diffline 后台执行
 diff file.txt file.txt.old > diffline &
 ```
 
 ## sort
-```
+```bash
 #!/bin/bash
 #  highest filename [howmany]
 
@@ -73,7 +73,7 @@ sort -nr $filename | head -$howmany
 ```
 
 ## compress
-```
+```bash
 #!/bin/bash
 filepath=$1
 cd $filepath

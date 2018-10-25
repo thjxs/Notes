@@ -1,5 +1,5 @@
 # 递归法
-```
+```cpp
 class Solution1 {
 public:
 	vector<int> inorderTraversal (TreeNode* root) {
