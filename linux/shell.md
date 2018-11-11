@@ -47,6 +47,11 @@ ${string//substring/replacement} # 使用 replacement 替换所有的 substring
 ## sed 替换文本内容
 ```sh
 sed -i 's/string/replacement/g' path/to/file
+sed -i '/lines/s/targetstring/replacement/' path/to/file
+# Example: delete the 4th line in a file
+$ sed '4d' input.txt > output.txt
+# Example: replace every occurrence of 'hello' with 'world' on lines 10-20
+$ sed '10,20s/hello/world/' input.txt > output.txt
 ```
 
 ## cut - remove sections from each line of files
