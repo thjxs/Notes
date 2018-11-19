@@ -59,6 +59,8 @@ $users = $query->addSelect('age')->get();
 
 # Joins
 
+![img](https://i.stack.imgur.com/66zgg.png)
+
 * Inner join
 ```
 $users = DB::table('users')
