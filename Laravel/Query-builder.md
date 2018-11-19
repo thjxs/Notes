@@ -4,16 +4,17 @@
 `$users = DB::table('users')->get();`
 
 * 从数据表中获取单行或列
+```
 // 获取整行
-`$user = DB::table('users')->where('name', 'John')->first();`
+$user = DB::table('users')->where('name', 'John')->first();
 // 获取单个值
-`$email = DB::table('users')->where('name', 'John')->value('email');`
+$email = DB::table('users')->where('name', 'John')->value('email');
 // 获取一列的值
 // 单列值的集合
-`$titles = DB::table('roles')->pluck('title');`
+$titles = DB::table('roles')->pluck('title');
 // 指定字段
-`$roels = DB::table('roels')->pluck('title', 'name');`
-
+$roels = DB::table('roels')->pluck('title', 'name');
+```
 * 分块结果
 ## 使用 `chunk` 方法可以从数千条需要处理的数据中取出一小块结果，并将结果传递给闭包处理
 ``` 
@@ -26,7 +27,17 @@ DB::table('users')->orderBy('id')->chunk(100, function ($users) {
 通过在闭包中返回 `false` 来阻止分块结果
 
 * 聚合
-`count`, `max`, `min`, `avg`, `sum`
+```
+# count 
+# max
+$price = \DB::table('orders')->max('price');
+// SELECT MAX(`price`) AS aggregate FROM `orders`;
+# min
+# avg
+$price = \DB::table('orders')->where('finalized', 1)->avg('price');
+// SELECT AVG(`price`) AS aggregate FROM `orders` WHERE `finalized` = 1;
+# sum
+```
 
 * 确定纪录是否存在
 // exists() doesntExist();
@@ -50,27 +61,29 @@ $users = $query->addSelect('age')->get();
 
 * Inner join
 ```
-// ?
 $users = DB::table('users')
-			->join('contacts', 'users.id', '=', 'contacts.user_id')
-			->join('orders', 'users.id', '=', 'orders.users_id')
-			->select('users.*', 'contacts.phone', 'orders.price')
-			->get();
+	->join('contacts', 'users.id', '=', 'contacts.user_id')
+	->join('orders', 'users.id', '=', 'orders.user_id')
+	->select('users.*', 'contacts.phone', 'orders.price')
+	->get();
+// SELECT `users`.*, `contacts`.`phone`, `orders`.`price` FROM `users` 
+    INNER JOIN `contacts` ON `users`.`id` = `contacts`.`user_id`
+    INNER JOIN `orders` ON `users`.`id` = `orders`.`user_id` ;
 ```
 
 * Left Join 
 ```
 $users = DB::table('users')
-			->leftJoin('posts', 'users.id', '=', 'posts.user_id')
-			->get();
+	->leftJoin('posts', 'users.id', '=', 'posts.user_id')
+	->get();
 ```
 
 * Cross Join 
 交叉连接在第一个表和连接之间生成笛卡儿积 // ？？？
 ```
 $users = DB::table('users')
-			->crossJoin('colours')
-			->get();
+	->crossJoin('colours')
+	->get();
 ```
 
 * Advance Join
@@ -87,12 +100,12 @@ DB::table('users)
 把两个查询联合起来
 ```
 $first = DB::table('users')
-			->whereNull('first_name');
+	->whereNull('first_name');
 
 $users = DB::table('users')
-			->whereNull('last_name')
-			->union($first)
-			->get();
+	->whereNull('last_name')
+	->union($first)
+	->get();
 ```
 
 # Where
@@ -111,9 +124,9 @@ $usres = DB::table('users')->where([
 * Or
 ```
 $users = DB::table('users')
-			->where('votes', '>', 199)
-			->orWhere('name', 'John')
-			->get();
+	->where('votes', '>', 199)
+	->orWhere('name', 'John')
+	->get();
 ```
 
 * whereBetween
@@ -144,23 +157,23 @@ DB::table('users')
 * whereExists //???
 ```
 DB::table('users')
-		->whereExists(function ($query) {
-			$query->select(DB::raw(1))
-					->from('orders')
-					->whereRaw('orders.user_id = users.id');
-		})
-		->get();
+	->whereExists(function ($query) {
+		$query->select(DB::raw(1))
+			->from('orders')
+			->whereRaw('orders.user_id = users.id');
+	})
+	->get();
 ```
 
 * JSON Where
 ```
 $users = DB::table('users')
-			->where('options->language', 'en')
-			->get();
+	->where('options->language', 'en')
+	->get();
 
 $users = DB::table('users')
-			->where('preferences->dining->meal', 'salad')
-			->get();
+	->where('preferences->dining->meal', 'salad')
+	->get();
 ```
 
 # Ordering, Grouping, Limit & Offset
@@ -168,8 +181,8 @@ $users = DB::table('users')
 * orderBy
 ```
 $users = DB::table('users')
-			->orderBy('name', 'desc')
-			->get();
+	->orderBy('name', 'desc')
+	->get();
 ```
 
 * latest / oldest
@@ -177,16 +190,16 @@ $users = DB::table('users')
 * inRandomOrder
 ```
 $randomUser = DB::table('users')
-				->inRandomOrder()
-				->first();
+	->inRandomOrder()
+	->first();
 ```
 
 * groupBy / having
 ```
 $users = DB::table('users')
-			->groupBy('account_id')
-			->having('account_id', '>', 100)
-			->get();
+	->groupBy('account_id')
+	->having('account_id', '>', 100)
+	->get();
 ```
 
 * skip / take
@@ -199,10 +212,10 @@ or
 $role = $request->input('role');
 
 $users = DB::table('users')
-			->when($role, function ($query) use ($role) {
-				return $query->where('role_id', $role);
-			})
-			->get();
+	->when($role, function ($query) use ($role) {
+		return $query->where('role_id', $role);
+	})
+	->get();
 ```
 
 一个查询的默认排序
@@ -210,12 +223,12 @@ $users = DB::table('users')
 $sortBy = null
 
 $users = DB::table('users')
-			->when($sortBy, function ($query) use ($sortBy) {
-				return $query->orderBy($sortBy);
-			}, function ($query) {
-				return $query->orderBy('name');
-			})
-			->get();
+	->when($sortBy, function ($query) use ($sortBy) {
+		return $query->orderBy($sortBy);
+	}, function ($query) {
+		return $query->orderBy('name');
+	})
+	->get();
 ```
 
 # 插入
