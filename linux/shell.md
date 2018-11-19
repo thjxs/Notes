@@ -44,7 +44,9 @@ ${string%%substring} # ...
 ${string/substring/replacement} # 使用 replacement 替换第一个匹配的 substring
 ${string//substring/replacement} # 使用 replacement 替换所有的 substring
 ```
-## sed 替换文本内容
+## sed 流编辑器
+> [Sed 命令完全指南](https://linux.cn/article-10232-1.html)
+
 ```sh
 sed -i 's/string/replacement/g' path/to/file
 sed -i '/lines/s/targetstring/replacement/' path/to/file
