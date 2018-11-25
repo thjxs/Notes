@@ -18,3 +18,5 @@ add: skip-grant-tables
 * then update authentication_string
 
 * sudo mysql -u root -p
+
+> [password validation](https://dev.mysql.com/doc/refman/8.0/en/validate-password-options-variables.html)
