@@ -4,3 +4,6 @@
 修改 host
 219.76.4.4 s3.amazonaws.com
 219.76.4.4 github-cloud.s3.amazonaws.com
+
+## backup database when vagrant box is destroyed
+`backup: true`
