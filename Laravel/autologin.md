@@ -1,6 +1,5 @@
-## Autologin with Laravel 5.6 
+## Autologin with Laravel Signed Urls
 
-signed urls。
 使用自带签名认证的url可以实现url自动登录，并不需要依赖数据的存储
 
 ```php
