@@ -7,6 +7,7 @@
 #!/bin/bash
 for files in $(find ./ -iname "*.jpg")
 do
+    # 移除文件名的括号
     filename=${files//[()]/}
     mv $files $filename
 done
