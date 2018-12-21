@@ -23,5 +23,7 @@ git rebase -i [commit id]
 
 # git push origin -d <branch>
 
+# git push origin -f
+
 # Create a global .gitignore
 ` git config --global core.excludesfile ~/.gitignore_global`
