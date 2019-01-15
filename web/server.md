@@ -29,16 +29,12 @@ rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 yum repolist all | grep mysql
 yum-config-manager --disable mysql80-community
 yum-config-manager --enable mysql57-community
-
 # verify subrepositories
 yum repolist enabled | grep mysql
-
 # install 
 yum install mysql-community-server
-
 # start service 
 systemctl start mysqld
-
 # alter user root's password
 grep 'temporary password' /var/log/mysqld.log
 ```

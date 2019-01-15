@@ -22,10 +22,8 @@ yum install -y mysql-community-server
 ```sh
 service mysqld start
 service mysqld status
-
 # update superuser account root@localhost
 grep 'temporary password' /var/log/mysqld.log
 mysql -uroot -p
-
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```

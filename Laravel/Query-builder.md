@@ -114,6 +114,7 @@ $users = DB::table('users')
 
 查询构建器的 `where` 方法需要三个参数
 列名 运算符 比较的值
+
 `$users = DB::table('users')->where('votes', '=', 100)->get()`
 
 ```
@@ -123,7 +124,7 @@ $usres = DB::table('users')->where([
 ])->get();
 ```
 
-* Or
+Or
 ```
 $users = DB::table('users')
 	->where('votes', '>', 199)
@@ -131,20 +132,20 @@ $users = DB::table('users')
 	->get();
 ```
 
-* whereBetween
+whereBetween
 验证字段的值位于两个值之间
 
-* whereNotBetween
+whereNotBetween
 
-* whereIn / whereNoIn
+whereIn / whereNoIn
 
-* whereNull / whereNotNull
+whereNull / whereNotNull
 
-* whereDate / whereMonth / whereDay / whereYear / whereTime
+whereDate / whereMonth / whereDay / whereYear / whereTime
 
-* whereColumn
+whereColumn
 
-* 参数分组
+参数分组
 ```
 DB::table('users')
 		->where('name', '=', 'John')
@@ -156,7 +157,7 @@ DB::table('users')
 // equal to select * from users where name = 'John' or (votes > 100 and title <> 'Admins')
 ```
 
-* whereExists //???
+whereExists //???
 ```
 DB::table('users')
 	->whereExists(function ($query) {
@@ -167,12 +168,11 @@ DB::table('users')
 	->get();
 ```
 
-* JSON Where
+JSON Where
 ```
 $users = DB::table('users')
 	->where('options->language', 'en')
 	->get();
-
 $users = DB::table('users')
 	->where('preferences->dining->meal', 'salad')
 	->get();
@@ -180,23 +180,23 @@ $users = DB::table('users')
 
 # Ordering, Grouping, Limit & Offset
 
-* orderBy
+orderBy
 ```
 $users = DB::table('users')
 	->orderBy('name', 'desc')
 	->get();
 ```
 
-* latest / oldest
+latest / oldest
 
-* inRandomOrder
+inRandomOrder
 ```
 $randomUser = DB::table('users')
 	->inRandomOrder()
 	->first();
 ```
 
-* groupBy / having
+groupBy / having
 ```
 $users = DB::table('users')
 	->groupBy('account_id')
@@ -204,7 +204,7 @@ $users = DB::table('users')
 	->get();
 ```
 
-* skip / take
+skip / take
 `DB::table('users')->skip(10)->take(5)->get();`
 or
 `DB::table('users')->offset(10)->limit(5)->get();`
@@ -235,7 +235,7 @@ $users = DB::table('users')
 
 # 插入
 
-* insert
+insert
 ```
 DB::table('users')->insert(
 	['email' => 'john@example.com', 'votes' => 0]
@@ -243,7 +243,7 @@ DB::table('users')->insert(
 
 ```
 
-* insertGetId
+insertGetId
 ```
 $id = DB::table('users')->insertGetId(
 	['email' => 'john@example.com', 'votes' => 0]
@@ -263,7 +263,7 @@ DB::table('users')
 	->update(['options->enabled' => 1]);
 ```
 
-* 自增与自减
+自增与自减
 increment & decrement
 
 # 删除

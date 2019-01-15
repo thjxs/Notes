@@ -48,9 +48,7 @@ DELETE /repos/:owner/:repo/issues/:number/lock
 201 Created
 202 Accepted
 204 No Content
-
 304 Not Modified
-
 400 Bad Request
 401 Unauthorized
 403 Forbidden
