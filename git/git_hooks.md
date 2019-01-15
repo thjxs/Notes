@@ -1,7 +1,7 @@
 # serve
 * post-receive
 ```sh
-#!/bin/sh
+#!/bin/bash
 # checkout files to a specific worktree when receive a push
 while read oldrev newrev ref
 do
