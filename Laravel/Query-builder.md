@@ -4,7 +4,7 @@
 `$users = DB::table('users')->get();`
 
 * 从数据表中获取单行或列
-```
+```php
 // 获取整行
 $user = DB::table('users')->where('name', 'John')->first();
 // 获取单个值
@@ -17,7 +17,7 @@ $roels = DB::table('roels')->pluck('title', 'name');
 ```
 * 分块结果
 ## 使用 `chunk` 方法可以从数千条需要处理的数据中取出一小块结果，并将结果传递给闭包处理
-``` 
+``` php
 DB::table('users')->orderBy('id')->chunk(100, function ($users) {
 	foreach($users as $user) {
 		//
@@ -27,7 +27,7 @@ DB::table('users')->orderBy('id')->chunk(100, function ($users) {
 通过在闭包中返回 `false` 来阻止分块结果
 
 * 聚合
-```
+```php
 # count 
 # max
 $price = \DB::table('orders')->max('price');
@@ -52,29 +52,29 @@ $price = \DB::table('orders')->where('finalized', 1)->avg('price');
 `$users = DB::table('users')->distinct()->get();`
 
 * addSelect() 在现有的 select 语句加入一个字段
-```
+```php
 $query = DB::table('users')->select('name');
 $users = $query->addSelect('age')->get();
 ```
 
 # Joins
 
-![img](https://i.stack.imgur.com/66zgg.png)
+![img](./66zgg.png)
 
 * Inner join
-```
+```php
 $users = DB::table('users')
 	->join('contacts', 'users.id', '=', 'contacts.user_id')
 	->join('orders', 'users.id', '=', 'orders.user_id')
 	->select('users.*', 'contacts.phone', 'orders.price')
 	->get();
 // SELECT `users`.*, `contacts`.`phone`, `orders`.`price` FROM `users` 
-    INNER JOIN `contacts` ON `users`.`id` = `contacts`.`user_id`
-    INNER JOIN `orders` ON `users`.`id` = `orders`.`user_id` ;
+// INNER JOIN `contacts` ON `users`.`id` = `contacts`.`user_id`
+// INNER JOIN `orders` ON `users`.`id` = `orders`.`user_id` ;
 ```
 
 * Left Join 
-```
+```php
 $users = DB::table('users')
 	->leftJoin('posts', 'users.id', '=', 'posts.user_id')
 	->get();
@@ -82,14 +82,14 @@ $users = DB::table('users')
 
 * Cross Join 
 交叉连接在第一个表和连接之间生成笛卡儿积 // ？？？
-```
+```php
 $users = DB::table('users')
 	->crossJoin('colours')
 	->get();
 ```
 
 * Advance Join
-```
+```php
 DB::table('users)
 	->join('contacts', function ($join) {
 		$join->on('users.id', '=', 'contacts.user_id')->orOn(...);
@@ -100,7 +100,7 @@ DB::table('users)
 # Unions
 
 把两个查询联合起来
-```
+```php
 $first = DB::table('users')
 	->whereNull('first_name');
 
