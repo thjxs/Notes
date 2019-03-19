@@ -27,3 +27,10 @@ git rebase -i [commit id]
 
 # Create a global .gitignore
 ` git config --global core.excludesfile ~/.gitignore_global`
+
+
+
+## commit 
+
+* --amend: amend previous commit
+* 
