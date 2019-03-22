@@ -1,4 +1,4 @@
-# lemp
+# LEMP
 
 ## Nginx
 

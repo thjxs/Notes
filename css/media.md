@@ -17,7 +17,7 @@
 all print screen speech
 
 # demo
-```
+```css
 @media screen and (min-width: 480px) {
 	body {
 		background-color: lightgreen;
@@ -29,7 +29,6 @@ all print screen speech
 	#main { margin-left: 216px; }
 }
 
-```
 # media queries in link tags
 <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation: portrait)">
@@ -46,6 +45,7 @@ all print screen speech
 # Scripting media feature
 @media (scripting: none) { ... }
 @media (scripting: enabled) { ... }
+```
 
 # Interaction media features
 # The hover media feature

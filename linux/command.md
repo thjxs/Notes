@@ -1,6 +1,8 @@
 # find
 1. 批量删除文件
 ` find ./ -name "*.log" -exec rm -rf {} \; `
+2. 修改子目录的文件权限
+`find -type f -exec chmod 644 {} \;`
 
 # 批量修改文件名
 ```bash

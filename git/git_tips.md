@@ -16,21 +16,26 @@
 ```
 
 # history log
-```sh
+```
 git log --oneline -5
 git rebase -i [commit id]
 ```
 
-# git push origin -d <branch>
+# delete branch
+```
+git push origin -d <branch>
+```
 
-# git push origin -f
+# overwrite
+```
+git push origin -f
+```
 
 # Create a global .gitignore
 ` git config --global core.excludesfile ~/.gitignore_global`
 
-
-
-## commit 
-
-* --amend: amend previous commit
-* 
+# commit
+```
+# amend previous commit
+git commit -amend
+```

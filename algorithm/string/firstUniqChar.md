@@ -1,6 +1,6 @@
 # 字符串中的第一个唯一字符
 
-```
+```js
 /**
  * @param {string} s
  * @return {number}

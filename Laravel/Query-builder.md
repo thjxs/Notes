@@ -16,7 +16,7 @@ $titles = DB::table('roles')->pluck('title');
 $roels = DB::table('roels')->pluck('title', 'name');
 ```
 * 分块结果
-## 使用 `chunk` 方法可以从数千条需要处理的数据中取出一小块结果，并将结果传递给闭包处理
+使用 `chunk` 方法可以从数千条需要处理的数据中取出一小块结果，并将结果传递给闭包处理
 ``` php
 DB::table('users')->orderBy('id')->chunk(100, function ($users) {
 	foreach($users as $user) {

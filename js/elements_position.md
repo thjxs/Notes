@@ -6,7 +6,7 @@
 
 # 获取网页元素的绝对位置
 网页元素的绝对位置，指该元素的左上角相对于整张网页左上角的坐标。
-```
+```js
 function getElementLeft(element) {
 	let actualLeft = element.offsetLeft;
 	let current = element.offsetParent;
@@ -34,7 +34,7 @@ function getElementTop(element) {
 
 # 获取元素的相对位置
 指元素左上角想对于浏览器窗口左上角的坐标
-```
+```js
 function getElementViewLeft(element) {
 	let actualLeft = element.offsetLeft;
 	let current = element.offsetParent;

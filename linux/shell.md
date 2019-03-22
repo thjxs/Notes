@@ -53,7 +53,7 @@ command 2>&1 >/dev/null  # 将 2 重定向到 1， 将 1 重定向到 /dev/null
 
 ###### replace
 
-```shell
+```bash
 # 将最长匹配的 *pattern* 替换为 *string* (expecially *#* *%*)
 ${variable/pattern/string}   # only the first match is replaced
 ${variable//pattern/string}  # all matches are replaced
@@ -62,7 +62,7 @@ ${variable//pattern/string}  # all matches are replaced
 ## sed 流编辑器
 > [Sed 命令完全指南](https://linux.cn/article-10232-1.html)
 
-```sh
+```bash
 sed -i 's/string/replacement/g' path/to/file
 sed -i '/lines/s/targetstring/replacement/' path/to/file
 # Example: delete the 4th line in a file
@@ -72,14 +72,14 @@ $ sed '10,20s/hello/world/' input.txt > output.txt
 ```
 
 ## cut - remove sections from each line of files
-```sh
+```bash
 #    input field:field2:field3
 #    out field
 cut -d: -f1 < /path/to/files | sort
 ```
 
 ## diff - compare files line by line
-```sh
+```bash
 # 比较两个文件，把结果输出到 diffline 后台执行
 diff file.txt file.txt.old > diffline &
 ```

@@ -6,12 +6,13 @@
 
 * srcset
 
-```
-<img src="scones_small.jpg" srcset="scones_medium.jpg 1.5x, scones_large.jpg 2x" alt="Scones taste amazing">
-```
+```html
+<img src="scones_small.jpg" srcset="scones_medium.jpg 1.5x, scones_large.jpg 2x">
 
-```
-<img src="scones-small.jpg 450w, scones-medium.jpg 900w" size="(min-width: 17em) 100vw, (min-width: 40em) 50vw" src="scones-small.jpg" alt="Scones">
+<img 
+src="scones-small.jpg 450w, scones-medium.jpg 900w" 
+size="(min-width: 17em) 100vw, (min-width: 40em) 50vw" 
+src="scones-small.jpg">
 ```
 
 # CSS3

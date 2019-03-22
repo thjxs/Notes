@@ -1,13 +1,13 @@
 # Grid
 
 * grid-row-start, grid-row-end, grid-column-start, grid-column-end
-
-Values auto|<custom-ident>|[<integer> && <custom-ident>?]|[span&&[<integer>]||<custom-ident>]]
-Initial value auto
-
+```
+    Values auto|<custom-ident>|[<integer> && <custom-ident>?]|[span&&[<integer>]||<custom-ident>]]
+    Initial value auto
+```
 
 # sample
-```
+```css
 #grid {
 	display: grid;
 	grid-template-areas:
@@ -17,3 +17,4 @@ Initial value auto
 	grid-template-rows: 200px 1fr 3em;
 	grid-template-columns: 20em 1fr 1fr 10em;
 }
+```

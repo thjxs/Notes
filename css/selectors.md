@@ -1,19 +1,22 @@
-* attributes
+## attributes
 
 img[alt]
 
-* substring matching
+## substring matching
 
-1. begining with
-img[alt^="film"]
+* begining with
 
-2. contains
-[attributes\*="value"]
+    img[alt^="film"]
 
-3. ends with
-[attributes$="value"]
+* contains
 
-* structural pseudo-classes
+    [attributes\*="value"]
+
+* ends with
+
+    [attributes$="value"]
+
+## structural pseudo-classes
 
 div:first-child
 

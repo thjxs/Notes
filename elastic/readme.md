@@ -2,7 +2,7 @@
 `./bin/elasticsearch -d -p pid`
 
 ## Install
-```sh
+```bash
 # install signing key
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 # create repository
@@ -21,7 +21,7 @@ yum install elasticsearch
 ```
 
 ## java env
-```
+```bash
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191
 export PATH=${JAVA_HOME}/bin:$PATH
 ```

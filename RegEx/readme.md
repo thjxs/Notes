@@ -1,5 +1,3 @@
-# RegEx
-
 ## 行定位符
 ^x  以 x 开头的字符串
 x$  以 x 结尾的字符串
@@ -7,11 +5,13 @@ ex: `^$` 匹配空行
 
 ## 字符组 匹配若干字符之一 [...]
 
-### 连字符 ‘-’ 表示一个范围
-[a-d]  表示 a b c d 其中一个
+* 连字符 ‘-’ 表示一个范围
 
-### 排除型字符组 匹配一个未列出的字符(match a character that's not listed)
-[^a-d] 匹配除了 a - d 以外的任何字符
+    [a-d]  表示 a b c d 其中一个
+
+* 排除型字符组 匹配一个未列出的字符(match a character that's not listed)
+
+    [^a-d] 匹配除了 a - d 以外的任何字符
 
 ## 多选结构
 `^(From|Subject|Date): `

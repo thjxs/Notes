@@ -2,8 +2,6 @@
 
 `php artisan make:comman BackupDatabase`
 
-mod command file
-
 ```php
 
 namespace App\Console\Commands;
