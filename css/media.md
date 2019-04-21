@@ -16,6 +16,9 @@
 # media type
 all print screen speech
 
+# 图片
+设置 *max-width* 图片不会大于其原始大小
+
 # demo
 ```css
 @media screen and (min-width: 480px) {
