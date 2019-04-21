@@ -31,11 +31,8 @@ git push origin -d <branch>
 git push origin -f
 ```
 
-# Create a global .gitignore
-` git config --global core.excludesfile ~/.gitignore_global`
-
 # commit
 ```
-# amend previous commit
-git commit -amend
+# amends a commit without changing its commit message
+git commit --amend --no-edit
 ```
