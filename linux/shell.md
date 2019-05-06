@@ -119,3 +119,8 @@ do
     guetzli --quality 85 --verbose $file ${pathto}${file#\.\/}
 done
 ```
+## wc
+```
+# 字符长度
+echo string | wc -L
+```
