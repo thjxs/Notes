@@ -12,3 +12,12 @@ const obj = {
 // "CC"
 obj.name = 'CC'
 ```
+
+## toFixed
+返回固定小数位的字符
+```js
+const number = 123.456
+
+// 123.46
+number.toFixed(2)
+```
