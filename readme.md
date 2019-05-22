@@ -17,3 +17,5 @@
 
 ## News
 - [Hacker News](https://news.ycombinator.com/)
+
+<p align="end"><img width="69" src="./img/jandan.svg" /></p>
