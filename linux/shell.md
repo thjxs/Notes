@@ -124,3 +124,38 @@ done
 # 字符长度
 echo string | wc -L
 ```
+
+## handle input with options
+```sh
+#!/usr/bin/bash
+if [ -n "$(echo $1 | grep '^-[0-9][0-9]*$')" ]; then
+    howmany=$1
+    shift
+elif [ -n "$(echo $1 | grep '^-')" ]; then
+    print 'usage: highest [-N] filename'
+    exit 1
+else
+    howmany="-10"
+fi
+filename=$1
+sort -nr $filename | head $howmany
+```
+
+## multiple options
+```sh
+while [[ -n "$(echo $1 | grep '-')" ]]; do
+    case $1 in
+        -a ) process option -a ;;
+        -b ) process option -b ;;
+        -c ) process option -c ;;
+        *  ) echo 'usage: alice [-a] [-b] [-c] args...'
+             exit 1
+    esac
+    shift
+done
+normal processing of arguments
+# This code checks $1 repeatedly as long as it starts with a dash (-). Then the
+# case construct runs the appropriate code depending on which option $1 is. If 
+# the option is invalid ---i.e., if it starts with a dash but isn't -a, -b
+done
+```
