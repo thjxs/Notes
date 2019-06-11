@@ -24,4 +24,7 @@
 
 # 顺序环视
 * 将 Jeffs 替换为 Jeff's
-`/\bJeff(?=s\b)/Jeff's/g
+`/\bJeff(?=s\b)/Jeff's/g`
+
+# 匹配数字
+`[0-9][0-9]*$`
