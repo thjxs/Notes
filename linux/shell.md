@@ -20,6 +20,16 @@ $1 ~ $n
 arguments value
 ```
 
+## Condition test
+```
+str1 = str2   # str1 matches str2
+str1 != str2  # str1 does not matches str2
+str1 < str2   # str1 is less than str2
+str1 > str2   # str1 is greater than str2
+-n str1       # str1 is not null
+-z str1       # str1 is null
+```
+
 ## shell 重定向 &>file 2>&1 1>&2
 ```
 文件描述符 
