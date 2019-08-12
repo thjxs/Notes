@@ -35,4 +35,8 @@ git push origin -f
 ```
 # amends a commit without changing its commit message
 git commit --amend --no-edit
+# rebase
+git rebase -i master
+# squash 
+git merge --squash
 ```
