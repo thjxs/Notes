@@ -27,8 +27,32 @@ function countdown(seconds) {
     })
 }
 
-const all = Promise.all([countdown(6), countdown(8)])
-all.then(res => {
+Promise.all([countdown(6), countdown(8)]).then(res => {
     console.log(res)
+})
+```
+
+## async map
+```js
+const assert = require('assert');
+function timesTwoAsync(x) {
+    return new Promise(resolve => resolve(x * 2));
+}
+
+const arr = [1, 2, 3];
+const promiseArr = arr.map(timesTwoAsync);
+Promise.all(promiseArr).then(result => {
+    assert.deepEqual(result, [2, 4, 6]);
+})
+```
+
+## race
+The `Promise.race()` method returns a promise that fulfills or rejects 
+as soon as one of the promise in an iterable fulfills or rejects, with the value
+or reason from that promise
+
+```js
+Promise.race([countdown(3), countdown(5)]).then(value => {
+    console.log(value)
 })
 ```
