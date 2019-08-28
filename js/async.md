@@ -23,6 +23,8 @@ function* interrogate() {
 ```
 
 ## async
+Return value: A `Promise` which sill be resolved with the value returned by the async
+function, or rejected with an uncaught exception thrown from within the async function
 ```js
 function resolveAfter2Seconds(x) {
     return new Promise(resolve => {
