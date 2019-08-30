@@ -6,3 +6,8 @@
 
 ### backup database when vagrant box is destroyed
 `backup: true`
+
+### manually add box
+```
+vagrant box add BOX_NAME PATH/TO/BOX
+```
