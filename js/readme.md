@@ -13,6 +13,15 @@ const obj = {
 obj.name = 'CC'
 ```
 
+## >>> (zero fill right shift)
+```
+9 (base 10): 00000000000000000000000000001001 (base 2)
+9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
+
+-9 (base 10): 11111111111111111111111111110111 (base 2)
+-9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
+```
+
 ## Hoisting
 JavaScript Hoisting: In JavaScript, ervry variable declaration is hoisted to the 
 top of its declaration context.
