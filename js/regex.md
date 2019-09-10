@@ -9,7 +9,7 @@ function highlightParas(containing) {
 
     for(let p of paras) {
         if (! containing.test(p.textContent)) {continue}
-            p.classList.add('highlight')
+        p.classList.add('highlight')
     }
 }
 ```
