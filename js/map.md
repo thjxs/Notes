@@ -49,8 +49,7 @@ const second = new Map([
 ])
 
 const merge = new Map([...first, ...second])
-resources/views/sale/quotation/requisition.blade.php
-resources/views/sale/delivery/add.blade.php
+
 ```
 ## WeakMap
 ```js
