@@ -30,15 +30,3 @@ var firstUniqChar = function(s) {
     return index != undefined ? index:(-1);
 };
 ```
-
-## other solution
-```
-var firstUniqChar = function(s) {
-    for(var i = 0; i < s.length; i++) {
-        if (s.lastIndexOf(s[i]) == i) {
-            return 1;
-        }
-    }
-    return -1;
-}
-```
