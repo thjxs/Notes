@@ -1,4 +1,7 @@
 ## drop
+The **`drop`** event is fired when an element or text selection is dropped on a valid
+drop target.
+
 ```html
 <div id='droptarget'></div>
 ```
