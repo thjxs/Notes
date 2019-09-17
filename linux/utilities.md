@@ -11,3 +11,15 @@
 
 `>> 1,2,3,`
 ```
+
+## insert
+```sh
+#!/usr/bin/bash
+str=''
+for c in {A..Z}
+do
+    str+="'${c}',"
+done
+
+sed -i 29i"${str}" ./lib/helpers.js
+```
