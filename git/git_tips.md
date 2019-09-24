@@ -21,6 +21,11 @@ git log --oneline -5
 git rebase -i [commit id]
 ```
 
+# branch 
+```
+git rev-parse --abbrev-ref HEAD
+```
+
 # delete branch
 ```
 git push origin -d <branch>
