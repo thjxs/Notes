@@ -57,3 +57,10 @@ const getStyle = (el, ruleName)  => getComputedStyle(el)[ruleName];
 
 getStyle(document.body, 'font-size'); // '16px'
 ```
+
+## hasClass
+```js
+const hasClass = (el, className) => el.classList.contains(className);
+
+hasClass(document.querySelector('p.special'), 'special');
+```
