@@ -50,3 +50,10 @@ const number = 123.456
 // 123.46
 number.toFixed(2)
 ```
+
+## getComputedStyle
+```js
+const getStyle = (el, ruleName)  => getComputedStyle(el)[ruleName];
+
+getStyle(document.body, 'font-size'); // '16px'
+```
