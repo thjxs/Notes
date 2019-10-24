@@ -45,3 +45,11 @@ git rebase -i master
 # squash 
 git merge --squash
 ```
+
+# diffstat
+--stat
+Generate a diffstat
+
+```
+git diff HEAD^ --stat
+```
