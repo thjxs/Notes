@@ -1,3 +1,20 @@
+## function scope and hosting
+JavaScript's function scope means that all variables declared within a function are visible *throughout* the body of the function
+
+```js
+function test(o) {
+    var i = 0;
+    if (typeof o == 'object') {
+        var j = o;
+    }
+    for(var k = 0; k < 3; k += 1) {}
+
+    // i is defined throughout function
+    // j is defined, but may not be initialized
+    // k is still defined: prints 3
+}
+```
+
 ## 函数的生命周期
 创建
 激活
