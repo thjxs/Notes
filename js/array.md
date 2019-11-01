@@ -10,3 +10,11 @@ const arr = [
 ]
 const targetArr = arr.filter(item => targetIds.indexOf(item.id) !== -1)
 ```
+
+## includes
+```js
+const animals = ['dog', 'cat', 'hamster']
+if (animals.includes('dog')) {
+    console.log('dog')
+}
+```
