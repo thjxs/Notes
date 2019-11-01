@@ -64,3 +64,12 @@ const hasClass = (el, className) => el.classList.contains(className);
 
 hasClass(document.querySelector('p.special'), 'special');
 ```
+
+## early exit 
+```js
+const printAnimalDetails = ({type, name, gender}) => {
+    if (!type) return 'no type';
+    if (!name) return 'no name';
+    if (!gender) return 'no gender';
+}
+```
