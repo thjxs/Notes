@@ -11,6 +11,12 @@ const arr = [
 const targetArr = arr.filter(item => targetIds.indexOf(item.id) !== -1)
 ```
 
+## reduce
+```js
+const arr = [1,2,3]
+const sum = arr.reduce((a, x) => a += x, 0)
+```
+
 ## includes
 ```js
 const animals = ['dog', 'cat', 'hamster']
