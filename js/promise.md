@@ -56,3 +56,17 @@ Promise.race([countdown(3), countdown(5)]).then(value => {
     console.log(value)
 })
 ```
+
+## Converting callbacks to promises
+```js
+const fs = require('fs')
+fs.readFile(filePath, options, callback)
+const readFilePromise = (...args) => {
+    return new Promise((resolve, reject) => {
+        fs.readFile(...args, (err, data) => {
+            if (err) return reject(err)
+                resolve(data)
+        })
+    })
+}
+```
