@@ -73,3 +73,27 @@ const printAnimalDetails = ({type, name, gender}) => {
     if (!gender) return 'no gender';
 }
 ```
+
+## async promise setTimeout
+```js
+async function a1() {
+    console.log('a1')
+    await a2()
+    console.log('a1 end')
+}
+async function a2() {
+    console.log('a2')
+}
+console.log('start')
+a1()
+setTimeout(() => {
+    console.log('s1')
+}, 0)
+new Promise((res, rej) => {
+    console.log('p1')
+    res()
+}).then(() => {
+    console.log('p then')
+})
+console.log('end')
+```
