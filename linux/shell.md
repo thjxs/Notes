@@ -20,6 +20,15 @@ $1 ~ $n
 arguments value
 ```
 
+## loop
+```
+c=('a' 'b' 'c')
+for cc in "${c[@]}";
+do
+    echo $cc
+done
+```
+
 ## Condition test
 ```
 str1 = str2   # str1 matches str2
