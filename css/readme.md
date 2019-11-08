@@ -14,3 +14,7 @@ Miscellaneous
 ## margin
 The top and bottom margins of blocks are sometimes combined (collapsed) 
 into a single margin whose size is the largest of the individual margins
+
+## user-select
+The `user-select` CSS property controls whether the user can select text.
+This doesn't have any effect on content loaded as chrome, except in textboxes
