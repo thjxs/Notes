@@ -1,3 +1,23 @@
+# media query syntax
+@media not|only mediatype and (expressions) {
+	//css
+}
+
+# media type
+all print screen speech
+
+# dark mode
+prefers-color-scheme: Detect if the user prefers a light or dark color scheme
+
+```
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #444;
+        color: #e4e4e4;
+    }
+}
+```
+
 # 媒体查询的分界点
 
 超小屏幕 手机 less than 768px
@@ -7,14 +27,6 @@
 中等屏幕 992px
 
 大屏幕 1200px
-
-# media query syntax
-@media not|only mediatype and (expressions) {
-	//css
-}
-
-# media type
-all print screen speech
 
 # 图片
 设置 *max-width* 图片不会大于其原始大小
