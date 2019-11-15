@@ -18,3 +18,7 @@ into a single margin whose size is the largest of the individual margins
 ## user-select
 The `user-select` CSS property controls whether the user can select text.
 This doesn't have any effect on content loaded as chrome, except in textboxes
+
+## overflow: hidden
+In order to hidden long text which include white space,
+You may use `white-space: nowrap;`
