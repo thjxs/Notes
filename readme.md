@@ -7,6 +7,7 @@
 
 - [ben frain](https://benfrain.com/blog/)
 - [laruence](http://www.laruence.com/)
+- [ruanyifeng](http://www.ruanyifeng.com/blog/)
 
 ## DOC
 
