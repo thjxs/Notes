@@ -6,3 +6,14 @@ location /ip {
     return 200 $remote_addr;
 }
 ```
+## location regex
+* = 
+* ~
+* ~\*
+* !~
+* !~*
+* ^
+* $
+* \
+* *
+* 
