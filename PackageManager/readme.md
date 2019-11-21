@@ -1,3 +1,8 @@
+## Taobao
+```
+https://registry.npm.taobao.org
+```
+
 ## Check registry
 `yarn config get registry`
 
