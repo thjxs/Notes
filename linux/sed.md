@@ -13,6 +13,8 @@ sed '10,20s/hello/world/' input.txt > output.txt
 sed '/^$/d' input.txt
 # Delete multiple lines 
 sed '1d;5d;9d;$d' input.txt
+# Replace regular express "test" > "newValue"
+sed 's/"test"/"newValue"' path/to/file
 ```
 
 ### Replace
