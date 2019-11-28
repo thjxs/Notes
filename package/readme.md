@@ -16,3 +16,6 @@ yarn config set registry url
 
 ## Per package config
 `yarn config set electron_mirror https://npm.taobao.org/mirrors/electron/`
+
+## Check error
+add `--verbos` flag
