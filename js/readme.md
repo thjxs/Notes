@@ -97,3 +97,6 @@ new Promise((res, rej) => {
 })
 console.log('end')
 ```
+
+## DOMHighResTimeStamp
+The value of a `DOMHighResTimeStamp` is a double-precision floating-point number which describes the number of milliseconds (accurate to within 5 microseconds if the device supports it) elapsed between two points in time. The starting time can be either a specific time determined by the script for a site or app, or the time origin.
