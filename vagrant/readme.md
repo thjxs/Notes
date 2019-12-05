@@ -9,5 +9,6 @@
 
 ### manually add box
 ```
+# Rename folder to specify box version
 vagrant box add BOX_NAME PATH/TO/BOX
 ```
