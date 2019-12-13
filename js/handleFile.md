@@ -31,3 +31,26 @@ function createJson(dataSource) {
     })
 }
 ```
+
+## write stream
+```js
+const fs = require('fs')
+const request = require('request')
+const http = require('http')
+const url = 'http://www.joshuawright.net/images/picture%20-%20slackwyrm%20003a.jpg?crc=3994258789'
+
+http.get(url, (res) => {
+    const imgWriteStream = fs.createWriteStream('a.png')
+    res.on('data', function(chunk) {
+        imgWriteStream.write(chunk)
+    })
+    res.on('end', function (e) {
+        imgWriteStream.end()
+    })
+})
+
+const req = request(url).pipe(fs.createWriteStream('b.png'))
+req.on('end', () => {
+    console.log('???')
+})
+```
