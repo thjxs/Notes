@@ -12,7 +12,7 @@ mkdir .ssh && chmod 700 .ssh
 touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
 # 把信任的公钥加入 authorized_keys
 cat path/to/id_rsa.name.pub >> ~/.ssh/authorized_keys
-etc
+# etc
 ```
 3. 新建仓库
 ```bash
