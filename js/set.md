@@ -16,6 +16,54 @@ const numbers = [2,3,4,5,6,2,3,5]
 console.log([...new Set(numbers)])
 ```
 
+### Implementing basic set operations
+```js
+function isSuperset(set, subset) {
+    for (let elem of subset) {
+        if (!set.has(elem)) return false;
+    }
+    return true
+}
+
+function union(setA, setB) {
+    let _union = new Set(setA)
+    for (let elem of setB) {
+        _union.add(elem)
+    }
+    return _union
+}
+
+function intersection(setA, setB) {
+    let _intersection = new Set()
+    for (let elem of setB) {
+        if (setA.has(elem)) {
+            _intersection.add(elem)
+        }
+    }
+    return _intersection
+}
+
+function symmetricDifference(setA, setB) {
+    let _difference = new Set(setA)
+    for (let elem of setB) {
+        if (_difference.has(elem)) {
+            _difference.delete(elem)
+        } else {
+            _difference.add(elem)
+        }
+    }
+    return _difference
+}
+
+function difference(setA, setB) {
+    let _difference = new Set(setA)
+    for (let elem of setB) {
+        _difference.delete(elem)
+    }
+    return _difference
+}
+```
+
 ## WeakSet
 The `WeakSet` object lets you store weakly held *objects* in a collection
 ```js
