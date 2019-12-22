@@ -35,9 +35,9 @@ ex: `^$` 匹配空行
 多选结构是“正则表达式语言主体（main regular expression language）”
 
 ## 单词定界符
-ex: an 可以匹配到 and
-\ban\b 则匹配不到
-\Ban\B 则相反，匹配不到 an 
+ex: `an` 可以匹配到 `and`
+`\ban\b` 则匹配不到
+`\Ban\B` 则相反，匹配不到 `an` 
 
 ## 匹配任意单个字符 .
 
