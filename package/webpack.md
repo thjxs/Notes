@@ -3,3 +3,9 @@ At its core, webpack is a static module bundler for modern JavaScript applicatio
 
 ## What I need
 file-loader, json-loader, url-loader
+
+## Resolving `import` at-rules
+The `sass-loader` uses Sass's custom importer feature to pass all queries to the Webpack resolving engine. Thus you can import your Sass modules from node_modules. Just prepend them with a ~ to tell Webpack that this is not a relative import:
+```
+@import '~bootstrap';
+```
