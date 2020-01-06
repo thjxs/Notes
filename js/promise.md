@@ -1,5 +1,16 @@
 ## The *Promise* object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
 
+### Syntax
+`new Promise(executor)`
+the executor is called before the `Promise` constructor even returns the created object
+
+A `Promise` is in one of these states:
+* pending
+* fulfilled
+* rejected
+
+As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained
+
 ```js
 let promise = new Promise((resolve, reject) => {
     // do something
