@@ -11,6 +11,7 @@ var WebSocketServer = require('websocket').server;
 var connectionArray = [];
 var nextID = Date.now();
 var appendToMakeUnique = 1;
+var protocol = 'ws';
 
 var httpsOptions = {
     key: fs.readFileSync('/path/to/name.key'),
@@ -91,7 +92,7 @@ wsServer.on('request', function(request) {
         return;
     }
 
-    var connection = request.accept('json', request.origin);
+    var connection = request.accept(protocol, request.origin);
     connectionArray.push(connection);
 
     connection.clientID = nextID;

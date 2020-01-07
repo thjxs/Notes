@@ -7,6 +7,7 @@ var clientID = 0;
 function connect() {
     var serverUrl;
     var scheme = 'ws';
+    var protocol = 'ws';
 
     if (document.location.protocol === 'https:') {
         scheme += 's';
@@ -14,7 +15,7 @@ function connect() {
 
     serverUrl = scheme + '://home.test:6502';
 
-    connection = new WebSocket(serverUrl, 'json');
+    connection = new WebSocket(serverUrl, protocol);
 
     connection.onopen = function (event) {
         console.log('connected');
