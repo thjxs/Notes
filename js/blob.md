@@ -23,4 +23,41 @@ var downloadFn = function (content, filename, mime, bom) {
         window.URL.revokeObjectURL(blobURL);
     }
 }
+
+// async
+async function saveFile(file) {
+    return new Promise(function (resolve, reject) {
+        const dataView = new DataView(file.plaintext)
+        const blob = new Blob([dataView], {type: file.type})
+        if (navigator.msSaveBlob) {
+            navigator.msSaveBlob(blob, file.name)
+            return resolve()
+        } else if (/iPhone|fxios/i.test(navigator.userAgent)) {
+            const reader = new FileReader()
+            reader.addEventListener('loadend', function () {
+                if (reader.error) {
+                    return reject(reader.error)
+                }
+                if (reader.result) {
+                    const a = document.createElement('a')
+                    a.href = reader.result
+                    a.download = file.name
+                    document.body.appendChild(a)
+                    a.click()
+                }
+                resolve()
+            })
+            reader.readAsDataURL(blob)
+        } else {
+            const downloadUrl = URL.createObjectURL(blob)
+            const a = document.createElement('a')
+            a.href = downloadUrl
+            a.download = file.name
+            document.body.appendChild(a)
+            a.click()
+            URL.revokeObjectURL(downloadUrl)
+            setTimeout(resolve, 100)
+        }
+    })
+}
 ```
