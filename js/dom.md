@@ -24,3 +24,8 @@ using `contentEditable`, `execCommand` affects the currently active editable ele
 ```js
 document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
+
+## queryCommandSupported
+```js
+document.queryCommandSupported('copy')
+```
