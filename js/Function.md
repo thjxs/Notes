@@ -9,7 +9,7 @@ var module = {
     getX: function() {return this.x}
 }
 module.getX() // 81
-var retrieveX = module.getX()
+var retrieveX = module.getX
 retrieveX() // 9
 var boundGetX = retrieveX.bind(module)
 boundGetX() //81
