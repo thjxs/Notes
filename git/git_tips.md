@@ -53,3 +53,9 @@ Generate a diffstat
 ```
 git diff HEAD^ --stat
 ```
+
+# cherry-pick
+Apply the changes introduced by some existing commits
+```
+git cherry-pick <commit>...
+```
