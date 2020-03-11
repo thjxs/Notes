@@ -66,6 +66,7 @@ plugins: [
     new MiniCssExtractPlugin({
         filename: '[name].[contenthash:8].css'
     })
+    new webpackManifestPlugin()
 ]
 ```
 
