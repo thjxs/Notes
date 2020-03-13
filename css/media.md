@@ -1,7 +1,9 @@
 # media query syntax
-@media not|only mediatype and (expressions) {
+```
+@media not|only (media type) and (expressions) {
 	//css
 }
+```
 
 # media type
 all print screen speech
@@ -44,20 +46,20 @@ prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 	#main { margin-left: 216px; }
 }
 
-# media queries in link tags
+// media queries in link tags
 <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation: portrait)">
 
-# Combining media queries
+// Combining media queries
 <link rel="stylesheet" type="text/css" href="#" media="screen and (orientation: portrait) and (min-width: 800px)">
 
-# Media queries with @import
+// Media queries with @import
 @import url ("phone.css") screen and (max-width: 360px);
 
-# Media queries in CSS
+// Media queries in CSS
 @media screen and (max-device-width: 400px)
 
-# Scripting media feature
+// Scripting media feature
 @media (scripting: none) { ... }
 @media (scripting: enabled) { ... }
 ```
