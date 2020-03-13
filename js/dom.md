@@ -1,5 +1,10 @@
+# DOM
+
+## DOMHighResTimeStamp
+The value of a `DOMHighResTimeStamp` is a double-precision floating-point number which describes the number of milliseconds (accurate to within 5 microseconds if the device supports it) elapsed between two points in time. The starting time can be either a specific time determined by the script for a site or app, or the time origin.
+
 ## innerHTML
-```
+```js
 document.getElementById('id').innerHTML = data.map(item => {
     return (
         '<li class="row"' +
@@ -28,4 +33,18 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ## queryCommandSupported
 ```js
 document.queryCommandSupported('copy')
+```
+
+## getComputedStyle
+```js
+const getStyle = (el, ruleName)  => getComputedStyle(el)[ruleName];
+
+getStyle(document.body, 'font-size'); // '16px'
+```
+
+## hasClass
+```js
+const hasClass = (el, className) => el.classList.contains(className);
+
+hasClass(document.querySelector('p.special'), 'special');
 ```
