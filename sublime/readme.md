@@ -28,3 +28,5 @@ find all under
 
 ## alt+-
 jump back
+
+## [settings](settings)
