@@ -16,3 +16,5 @@ git diff <commit> <commit> [--] [<path>]
 搭建git远程仓库服务
 
 ## [git tips](git_tips)
+
+## [git history](git_history)
