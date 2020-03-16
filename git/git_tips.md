@@ -47,11 +47,13 @@ git merge --squash
 ```
 
 # diffstat
---stat
-Generate a diffstat
+flag *--stat* generate a diffstat
 
 ```
 git diff HEAD^ --stat
+# eg
+ git/git_server.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 ```
 
 # cherry-pick
