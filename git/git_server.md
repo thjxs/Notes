@@ -1,7 +1,9 @@
 # 服务器上的 Git
 
 1. SSH 公钥 [link](https://help.github.com/articles/generating-ssh-keys)
-ssh-keygen
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 2. 为服务器配置
 ```bash
