@@ -9,3 +9,5 @@ China CDN config
 ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 ELECTRON_CUSTOM_DIR="{{ version }}"
 ```
+
+## [进程间通信](ipc)
