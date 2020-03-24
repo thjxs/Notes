@@ -1,4 +1,4 @@
-## action
+## [action](actions)
 An action is a plain JavaScript object that describes what happened
 ```js
 {type: 'ADD_TODO', text: 'go to swimming pool'}
@@ -16,7 +16,7 @@ function addTodo(text) {
 }
 ```
 
-## reducer
+## [reducer](reducers)
 takes state and action as arguments, and returns the next state of the app.
 
 * **DO NOT** mutate the state
