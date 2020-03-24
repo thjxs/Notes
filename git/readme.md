@@ -18,3 +18,5 @@ git diff <commit> <commit> [--] [<path>]
 ## [git tips](git_tips)
 
 ## [git history](git_history)
+
+## [git rebase](git_rebase)
