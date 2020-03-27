@@ -1,3 +1,20 @@
+## static
+Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children.
+```js
+class Chameleon {
+    static colorChange(newColor) {
+        this.color = newColor
+        return this.color
+    }
+    constructor({newColor = 'green'} = {}) {
+        this.color = newColor
+    }
+}
+
+const freddie = new Chameleon({newColor: 'purple'})
+console.log(freddie.colorChange('orange')) // TypeError
+```
+
 ## bind
 
 The `bind()` method creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding and provided when the new function is called.
