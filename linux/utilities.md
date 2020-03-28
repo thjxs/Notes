@@ -23,3 +23,10 @@ done
 
 sed -i 29i"${str}" ./lib/helpers.js
 ```
+
+## find mv
+```sh
+#!/usr/bin/bash
+# find all mp4 file then move them to current directory
+find ./ -name '*.mp4' -exec mv {} ./ \;
+```
