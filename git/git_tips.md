@@ -38,3 +38,8 @@ Apply the changes introduced by some existing commits
 ```
 git cherry-pick <commit>...
 ```
+
+# revert
+```
+git revert <commit>
+``` 
