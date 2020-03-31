@@ -47,3 +47,13 @@ function Person(fn, ln) {
 const lydia = new Person('Lydia', 'Hallie')
 const sarah = Person('Sarah', 'Smith') // this refers to the global object
 ```
+
+## Object keys
+Object keys are automatically converted into strings.
+
+```js
+const a = {}
+const b = {key: 'b'}
+a[b] = 123
+console.log(a) //{'[object Object]': 123}
+```
