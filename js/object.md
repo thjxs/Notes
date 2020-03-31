@@ -29,3 +29,21 @@ var p = {
     }
 }
 ```
+
+## The `new` keyword
+
+* Creates a blank, plain JavaScript object
+* Links (sets the constructor of) this object to another object
+* Passes the newly created object from Step 1 as the this context
+* Returns `this` if the function doesn't return its own object
+
+## eg
+```js
+function Person(fn, ln) {
+    this.firstName = fn
+    this.lastName = ln
+}
+
+const lydia = new Person('Lydia', 'Hallie')
+const sarah = Person('Sarah', 'Smith') // this refers to the global object
+```
