@@ -30,3 +30,11 @@ sed -i 29i"${str}" ./lib/helpers.js
 # find all mp4 file then move them to current directory
 find ./ -name '*.mp4' -exec mv {} ./ \;
 ```
+
+## find sed
+```sh
+#!/usr/bin/bash
+# 
+# delete match line in all index.html file
+find ./ -name 'index.html' -exec sed -i -e '/value/d' {} \;
+```
