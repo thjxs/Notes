@@ -51,6 +51,12 @@ cp path/{f1,dir1,f2,dir2} path/target
 cp /path/pre{1..3} path/target
 ```
 
+# mv
+```sh
+# rename "foo-bar" to "foo-baz"
+mv foo{-bar, -baz}
+```
+
 # info
 ```sh
 df -h
