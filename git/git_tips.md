@@ -43,3 +43,9 @@ git cherry-pick <commit>...
 ```
 git revert <commit>
 ``` 
+
+# reset 
+```
+# branch diverged
+git reset --hard <commit>
+```
