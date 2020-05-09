@@ -31,3 +31,17 @@
 
 # 匹配数字和字母混合
 `^(?![0-9]{5}$)(?![A-z]{5}$)[0-9A-z]{5}$`
+
+# Backreferences
+`/([abc])\1\1/g`
+* abc // no match
+* aaa // matched
+* bbb // matched
+
+`/[abc][abc][abc]/g`
+* abc // mathced
+* bac // matched
+* a cbale // matched
+
+# Query string parameters
+`/^\?(\w+)=(\w+)(?:&(\w+)=(\w+))*$/g`
