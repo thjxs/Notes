@@ -11,6 +11,7 @@
 * [dom](dom)
 * [drop](drop)
 * [elements_position](elements_position)
+* [event loop](event-loop)
 * [example](example)
 * [exec](exec)
 * [expressions_and_operators](expressions_and_operators)
