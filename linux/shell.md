@@ -166,3 +166,13 @@ normal processing of arguments
 # the option is invalid ---i.e., if it starts with a dash but isn't -a, -b
 done
 ```
+
+## or
+```sh
+
+# if node_modules does't exist, the run yarn
+test -d node_modules || yarn
+
+# create directory
+test -d tmp || mkdir tmp
+```
