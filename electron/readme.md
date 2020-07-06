@@ -11,3 +11,5 @@ ELECTRON_CUSTOM_DIR="{{ version }}"
 ```
 
 ## [进程间通信](ipc)
+
+## [窗口](browser_window)
