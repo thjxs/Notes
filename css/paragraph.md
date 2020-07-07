@@ -7,6 +7,8 @@ text-overflow: ellipsis;
 ```
 
 ## max-content
+The intrinsic preferred width
+
 ```css
 p.maxgreen {
     background: lightgreen;
