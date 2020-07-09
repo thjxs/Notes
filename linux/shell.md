@@ -1,25 +1,3 @@
-## shell $ sign
-```
-$$
-shell process ID
-$!
-shell background process ID
-$?
-exit code
-$-
-set flag
-$*
-arguments lists
-$@
-arguments lists
-$#
-num of arguments
-$0
-shell file name
-$1 ~ $n
-arguments value
-```
-
 ## loop
 ```
 c=('a' 'b' 'c')

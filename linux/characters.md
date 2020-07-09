@@ -91,3 +91,36 @@ done
 # Arg #2 2
 # Arg #3 3
 ```
+
+## shell $ sign
+```
+$$
+shell process ID
+$!
+shell background process ID
+$?
+exit code
+$-
+set flag
+$*
+arguments lists
+$@
+arguments lists
+$#
+num of arguments
+$0
+shell file name
+$1 ~ $n
+arguments value
+```
+
+## brace expansion
+```sh
+echo \"{a,b,c}\" # "a" "b" "c"
+
+echo {f1,f2}\ :{\ A, " B", ' C'}
+# f1 : A f1 : B f1 : C f2 : A f2 : B f2 : C
+
+# Extended brace expansion
+echo {0..3} # 0 1 2 3
+```
