@@ -51,3 +51,30 @@ function useFetch(url, options) {
     return {response, error}
 }
 ```
+
+## useContext
+```js
+const value = useContext(MyContext)
+```
+
+## useReducer
+```js
+const initialState = {count: 0}
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'in':
+        return {count: state.count + 1}
+        case 'de':
+        return {count: state.count - 1}
+        default
+        throw new Error()
+    }
+}
+
+function Counter() {
+    const [state, dispatch] = useReducer(reducer, initialState)
+    // render
+    // dispatch({type: 'in'})
+}
+```
