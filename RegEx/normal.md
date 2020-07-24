@@ -45,3 +45,6 @@
 
 # Query string parameters
 `/^\?(\w+)=(\w+)(?:&(\w+)=(\w+))*$/g`
+
+# file extension
+`/\.[^./\\]*$/`
