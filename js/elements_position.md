@@ -44,13 +44,28 @@ function getElementViewLeft(element) {
 		current = current.offsetParent;
 	}
 
+	let elementScrollLeft = document.documentElement.scrollLeft;  
 	if (document.compatMode == "BackCompat") {
-		let = elementScrollLeft = document.body.scrollLeft;
-	} else {
-		let elementScrollLeft = document.documentElement.scrollLeft;
+		elementScrollLeft = document.body.scrollLeft;
 	}
 
 	return actualLeft - elementScrollLeft;
+}
+
+function getElementViewTop(element) {
+    let actualTop = element.offsetTop
+    let current = element.offsetParent
+
+    while (current !== null) {
+        actualTop += current.offsetTop
+        current = current.offsetParent
+    }
+
+    let elementScrollTop = document.documentElement.scrollTop
+    if (document.compatMode === 'BackCompat') {
+        elementScrollTop = document.body.scrollTop
+    }
+    return actualTop - elementScrollTop
 }
 
 
