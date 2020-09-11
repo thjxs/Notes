@@ -24,5 +24,10 @@ top level, the scope chain consists of a single object, the global object.
 In a non-nested function, the scope chain consists of two objects. The first is the object that defines the function's parameters and local variables, and the second is the global object.
 In a nested function, the scope chain has three or more objects.
 
+JavaScript functions are executed using the scope chain that was in effect when they were defined.
+
+每当函数执行时，将会创建一个新的对象去保留本地变量，然后该对象将被添加到原型链上
+
 ## nested function
 each time the outer function is called, the inner function is defined again.
+
