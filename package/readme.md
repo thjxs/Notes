@@ -19,3 +19,13 @@ yarn config set registry url
 
 ## Check error
 add `--verbos` flag
+
+## publish
+```
+# login
+npm login
+# check registry
+npm config get registry
+# with scope (@thjxs/xx)
+npm publish --access=publish
+```
