@@ -5,8 +5,7 @@ paragraph
 ```
 
 ## ctrl+shift+a
-```
-# html
+```html
 <div><a href="#">click</a></div>
 ```
 
