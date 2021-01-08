@@ -29,3 +29,14 @@ npm config get registry
 # with scope (@thjxs/xx)
 npm publish --access=publish
 ```
+
+## workspaces
+使用工作空间设置依赖
+```json
+{
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ]
+}
+```
