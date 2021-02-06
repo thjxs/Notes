@@ -30,6 +30,18 @@ var p = {
 }
 ```
 
+## Private field declarations
+```js
+class Rectanble {
+    #height = 0;
+    #width;
+    constructor(height, width) {
+        this.#height = height;
+        this.#width = width;
+    }
+}
+```
+
 ## The `new` keyword
 
 * Creates a blank, plain JavaScript object
