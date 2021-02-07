@@ -2,7 +2,7 @@
 ```sh
 set -e
 p=$1
-yarn create react-app $p
+yarn create react-app $p --template typescript
 cd $p
 yarn add tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 @craco/craco
 
@@ -33,6 +33,6 @@ echo "module.exports = {
 
 echo "@tailwind base;
 @tailwind components;
-@tailwind utilities;" >> src/index.css
+@tailwind utilities;" > src/index.css
 
 ```
