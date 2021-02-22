@@ -40,3 +40,8 @@ npm publish --access=publish
     ]
 }
 ```
+## Set up homepage
+```
+package.json
+"homepage": "."
+```
