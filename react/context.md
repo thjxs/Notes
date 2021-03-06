@@ -8,6 +8,9 @@ Context provides a way to pass data through the component tree without having to
 * Context.Consumer // function component
 * Context.displayName
 
+### Hooks
+* useContext
+
 ### example
 ```js
 // context
