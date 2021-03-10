@@ -1,11 +1,12 @@
 # memo - higher order component
 
-memo only checks for prop changes
+memo only checks for prop changes, if `prevProps` equal `nextProps` and `current.ref` equal `workInProgress.ref`, it will reuse last rendered result, which brings performance boost
 
-be care of compare
+be care of compare, default `shallowEaul`, may provide `compare` function
 
-## why memo brings performance boost
-it will reuse last rendered result
+there are two type of memo
+* SimpleMemoComponent
+* MemoComponent
 
 ## tips
 Instead of forwardRef(memo(...)), use memo(forwardRef(...))
