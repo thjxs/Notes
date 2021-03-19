@@ -52,6 +52,27 @@ function useFetch(url, options) {
 }
 ```
 
+Cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.
+```js
+useEffect(() => {
+    // use AbortController to cancel fetch request
+    const ab = new AbortController()
+    async function get() {
+        try {
+            const res = await fetch(url, {signal: ab.signal})
+            //
+        } catch (error) {
+            //
+        }
+    }
+    get()
+    return () => {
+        ab.abort()
+    }
+}, [])
+```
+
+
 ## useContext
 ```js
 const value = useContext(MyContext)
