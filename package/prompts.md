@@ -1,8 +1,8 @@
-# interactive prompts
+# interactive [prompts](https://github.com/terkelg/prompts)
 
 ## usage
 ```js
-const prompts = require('prompts')
+const prompts = require('prompts');
 
 (async () => {
     const response = await prompts({
@@ -13,5 +13,5 @@ const prompts = require('prompts')
     })
 
     console.log(response) // eg: {age: 24}
-})
+})();
 ```
