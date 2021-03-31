@@ -79,7 +79,7 @@ ex: `an` 可以匹配到 `and`,
 3. (?:) non capturing groups
 
 模式修饰符
-i
-m
-s
-x
+i: 不区分大小写
+m: 多行搜索
+s: 允许 . 匹配换行符
+x: ?
