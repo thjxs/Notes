@@ -30,6 +30,17 @@ var p = {
 }
 ```
 
+## `__proto__`
+It will overwrite Object's method, be careful using in production.
+
+```js
+const cache = {}
+cache['__proto__'].foo = 123
+const anotherCache = {}
+console.log(foo)
+console.log(anotherCache.foo)
+```
+
 ## Private field declarations
 ```js
 class Rectanble {
