@@ -1,25 +1,49 @@
 # life cycle
 
-## Mounting
+![life cycle](./../img/lifecycle.png)
 
-* constructor() // init state and bind methods
-* static getDerivedStateFromProps()
-* render() // return React elements, Arrays, Portals, String or Booleans
-* componentDidMount() // component is mounted(inserted into the tree)
+### render
+return following types
+* React elements // typically craeted via `JSX`
+* Arrays and fragments // return multiple elements
+* Portals // render children into a different DOM subtree
+* String and numbers // text node
+* Booleans or null // render nothing
 
-## Updating
+### constructor
+Initialize state and bind methods
+```js
+constructor(props) // assign state to this.state diretcly
+```
 
-* static getDerivedStateFromProps()
-* shouldComponentUpdate()
-* render() // will not be invoked if *souldComponentUpdate()* returns false
-* getSnapshotBeforeUpdate()
-* componentDidUpdate() // operate on the DOM or network request
+### componentDidMount
+invoke immediately after a component is mounted (inserted into the tree)
 
-## Unmounting
+### componentDidUpdate
+invoke immediately after updating occurs
+```js
+componentDidUpdate(prevProps, prevState, snapshot)
+```
 
-* componentWillUnmount() // component is unmounted and destroyed
+### componentWillUnmount()
+invoke immediately before a component is unmounted and destroyed.
 
-## Error Handling
+### shouldComponentUpdate
+performance optimization
 
-* static getDerivedStateFromError()
-* componentDidCatch()
+### getDerivedStateFromProps
+invoke right before calling the render method.
+```js
+// return an object to update the state, or null to update nothing
+static getDerivedStateFromProps(props, state)
+```
+
+### getSnapshotBeforeUpdate
+invoke right before the most recently rendered 
+returns value will be passed as a parameter to `componentDidUpdate`
+```js
+getSnapshotBeforeUpdate(prevProps, prevState)
+```
+
+### static getDerivedStateFromError()
+### componentDidCatch()
