@@ -2,4 +2,8 @@
 ## [create-react-app](create-react-app)
 ## [hooks](hooks)
 ## [Issue](Issue)
+## [life cycle](lifecycle)
+## [memo](memo)
+## [proxy](proxy)
 ## [refs](refs)
+## [virtualize-long-lists](virtualize-long-lists)
