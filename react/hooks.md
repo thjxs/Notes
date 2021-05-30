@@ -10,18 +10,26 @@
 [useDebugValue](#useDebugValue)
 
 ## useState
+`setState` function identity is stable and won't change on re-renders.
 ```js
 const [state, setState] = useState(initialState)
 setState(newState)
 ```
+
+Functional updates
 
 ```js
 import React, {useState} from 'react'
 
 function Example() {
     const [count, setCount] = useState(0)
+    setCount((prevCount) => prevCount + 1)
 }
 ```
+
+Bailing out of a state update
+
+if updated state same as current state, React will bail out without rendering the children or firing effects.
 
 ## useEffect
 do something after component render
@@ -72,6 +80,7 @@ useEffect(() => {
 }, [])
 ```
 
+The clean up function runs before the component is removed from the UI to prevent memory leaks.
 
 ## useContext
 ```js
