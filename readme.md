@@ -9,6 +9,7 @@ A major part of software engineering is building components that not only have w
 - [ben frain](https://benfrain.com/blog/)
 - [laruence](http://www.laruence.com/)
 - [ruanyifeng](http://www.ruanyifeng.com/blog/)
+- [Jank Free](http://jankfree.org/)
 
 ## DOC
 
