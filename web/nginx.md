@@ -5,3 +5,18 @@ location /download/ {
     limit_rate 50K;
 }
 ```
+
+## location
+```
+location / {
+    root /path/to/project_a;
+    index index.html index.htm;
+    try_files $uri $uri/ /;
+}
+
+location /another {
+    alias /path/to/project_b;
+    try_files $uri $uri/ /another;
+}
+
+```
