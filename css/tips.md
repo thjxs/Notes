@@ -22,3 +22,6 @@ You may use `white-space: nowrap;`
 ## margin
 The top and bottom margins of blocks are sometimes combined (collapsed) 
 into a single margin whose size is the largest of the individual margins
+
+## font
+The `font-variant-east-asian` CSS property controls the use of alternate glyphs for East Asian scripts, like Chinese and Japanese.
