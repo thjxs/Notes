@@ -1,3 +1,6 @@
+# Blob
+The `Blob` object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a `ReadableStream` so its methods can be used for processing the data.
+
 ## 下载文件
 ```js
 var downloadFn = function (content, filename, mime, bom) {
