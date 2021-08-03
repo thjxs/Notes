@@ -49,3 +49,13 @@ git revert <commit>
 # branch diverged
 git reset --hard <commit>
 ```
+
+# find delete file
+```sh
+git log --diff-filter=D --summary | grep delete
+```
+
+# find file commit id
+```sh
+git log --all <FILEPATH>
+```
