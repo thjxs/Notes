@@ -1,17 +1,45 @@
-# media query syntax
-```
+# Meddia queries
+
+## media query syntax
+```css
 @media not|only (media type) and (expressions) {
 	//css
 }
 ```
 
-# media type
+## media type
 all print screen speech
 
-# dark mode
+## Media features
+* any-hover
+* any-pointer
+* aspect-ratio
+* color
+* color-gamut
+* color-index
+* display-mode
+* forced-colors
+* grid
+* height
+* hover
+* inverted-colors
+* monochrome
+* orientation
+* overflow-block
+* overflow-inline
+* pointer
+* prefers-color-scheme
+* prefers-contrast
+* prefers-reduced-motion
+* resolution
+* scripting
+* update
+* width
+
+## dark mode
 prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 
-```
+```css
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #444;
@@ -20,7 +48,26 @@ prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 }
 ```
 
-# 媒体查询的分界点
+## hover
+```css
+button {
+
+}
+
+@media(hover: hover) {
+    button {
+
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    button {
+
+    }
+}
+```
+
+## 媒体查询的分界点
 
 超小屏幕 手机 less than 768px
 
@@ -30,10 +77,10 @@ prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 
 大屏幕 1200px
 
-# 图片
+## 图片
 设置 *max-width* 图片不会大于其原始大小
 
-# demo
+## demo
 ```css
 @media screen and (min-width: 480px) {
 	body {
@@ -63,7 +110,3 @@ prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 @media (scripting: none) { ... }
 @media (scripting: enabled) { ... }
 ```
-
-# Interaction media features
-# The hover media feature
-# Environment media features
