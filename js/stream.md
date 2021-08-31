@@ -25,6 +25,29 @@ server.on('request', (req, res) => {
 server.listen(9001)
 ```
 
+## compose file
+```js
+#!/usr/bin/env node
+const fs = require('fs')
+
+const files = [] // file list
+
+const writeStream = fs.createWriteStream('target')
+
+function compose() {
+    if (files.length <= 0) {
+        writeStream.end('done')
+        return
+    }
+
+    const stream = fs.createReadStream(files.shift())
+    stream.pipe(writeStream, {end: false})
+    stream.on('end', compose)
+}
+
+compose()
+```
+
 ## Web APIs
 ReadableStream, The `ReadableStream` constructor creates and returns a readable stream object from the given handlers
 
