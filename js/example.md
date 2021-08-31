@@ -1,12 +1,13 @@
-## tabs
+# tabs
+
 An switch tabs
 using 'tab', 'tabpanel' mark tabs's role
 
-The click event 
+The click event
 set all tab, tabpanel hidden
 
 label
-aria-selected, 
+aria-selected,
 aria-controls indicate tabpanel's ID
 
 ```js

@@ -1,3 +1,5 @@
+# Hooks
+
 [useState](#useState)
 [useEffect](#useEffect)
 [useContext](#useContext)
@@ -10,7 +12,9 @@
 [useDebugValue](#useDebugValue)
 
 ## useState
+
 `setState` function identity is stable and won't change on re-renders.
+
 ```js
 const [state, setState] = useState(initialState)
 setState(newState)
@@ -32,12 +36,14 @@ Bailing out of a state update
 if updated state same as current state, React will bail out without rendering the children or firing effects.
 
 ## useEffect
+
 do something after component render
 such as data fetching or call some other imperative api
 
-**return a function to cleanup effects**
+return a function to cleanup effects
 
 pass an array as an options second argument to `useEffect` to skip apply an effect if certain values haven't changed between re-renders
+
 ```js
 import React from 'react'
 
@@ -61,6 +67,7 @@ function useFetch(url, options) {
 ```
 
 Cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.
+
 ```js
 useEffect(() => {
     // use AbortController to cancel fetch request
@@ -83,11 +90,13 @@ useEffect(() => {
 The clean up function runs before the component is removed from the UI to prevent memory leaks.
 
 ## useContext
+
 ```js
 const value = useContext(MyContext)
 ```
 
 ## useReducer
+
 ```js
 const initialState = {count: 0}
 

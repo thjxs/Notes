@@ -5,8 +5,10 @@ memo only checks for prop changes, if `prevProps` equal `nextProps` and `current
 be care of compare, default `shallowEaul`, may provide `compare` function
 
 there are two type of memo
+
 * SimpleMemoComponent
 * MemoComponent
 
 ## tips
+
 Instead of forwardRef(memo(...)), use memo(forwardRef(...))

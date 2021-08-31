@@ -1,13 +1,15 @@
-## built-in objects
+# built-in objects
 
-### Value properties
+## Value properties
+
 * Infinity
 * NaN
 * undefined
 * null
 * globalThis
 
-### Function properties
+## Function properties
+
 * eval()
 * isFinite()
 * isNaN()
@@ -18,7 +20,8 @@
 * encodeURI()
 * encodeURIComponent()
 
-### Fundamental objects
+## Fundamental objects
+
 * Object
 * Function
 * Boolean
@@ -31,17 +34,20 @@
 * TypeError
 * URIError
 
-### Numbers and dates
+## Numbers and dates
+
 * Number
 * BigInt
 * Math
 * Date
 
-### Text processing
+## Text processing
+
 * String
 * RegExp
 
-### Indexed collections
+## Indexed collections
+
 * Array
 * Int8Array
 * Uint8Array
@@ -55,26 +61,30 @@
 * BigInt64Array
 * BigUint64Array
 
-### Keyed collections
+## Keyed collections
+
 * Map
 * Set
 * WeakMap
 * WeakSet
 
-### Structured data
+## Structured data
+
 * ArrayBuffer
 * DataView
 * JSON
 
-### Control abstraction objects
+## Control abstraction objects
+
 * Promise
 * Generator
 * GeneratorFunction
 
-### Reflection
+## Reflection
+
 * Reflect
 * Proxy
 
-### Internationalization
+## Internationalization
 
-### WebAssembly
+## WebAssembly

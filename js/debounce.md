@@ -1,3 +1,5 @@
+# Debounce
+
 ```js
 function debounce(func, wait) {
     let timeout;
@@ -15,4 +17,5 @@ function debounce(func, wait) {
 ```
 
 ## keywords
+
 [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

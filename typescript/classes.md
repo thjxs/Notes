@@ -1,6 +1,7 @@
 # Classes
 
 ## Inheritance
+
 ```js
 class A {
     echo() {
@@ -16,6 +17,7 @@ class Aa extends A {
 ```
 
 ## Public, private, and protected modifiers
+
 ```ts
 class A {
     public name: string;
@@ -25,6 +27,7 @@ class A {
 ```
 
 ### ECMAScript
+
 ```js
 // private fields
 class A {
@@ -33,6 +36,7 @@ class A {
 ```
 
 ## Accessors
+
 ```js
 class A {
     get name() {

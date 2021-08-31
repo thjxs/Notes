@@ -1,14 +1,17 @@
-## start up
+# start up
+
 定义一个 *clipboard-copy* 标签
 用 navigator.clipboard 或 Selection 和 Range 复制内容到剪切板
 
-### reminder
+## reminder
+
 * dispatchEvent
 * CustomEvent
 * ownerDocument
 * navigator.clipboard
 
-##  custom element
+## custom element
+
 ```js
 import ClipboardCopyElement from './clipboard-copy-element'
 
@@ -19,6 +22,7 @@ if (!window.customElements.get('clipboard-copy')) {
 ```
 
 ## element
+
 ```js
 import {copyInput, copyNode, copyText} from './clipboard'
 
@@ -106,6 +110,7 @@ export default class ClipboardCopyElement extends HTMLElement {
 ```
 
 ## clipboard
+
 ```js
 function createNode(text: string): Element {
     const node = document.createElement('pre')

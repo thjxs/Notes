@@ -1,4 +1,5 @@
-## require
+# require
+
 choo: framework
 
 webpack: build tool
@@ -19,9 +20,10 @@ mini-css-extract-plugin: extracts css into separate files
 
 postcss-loader: postcss-loader for webpack
 
-
 ## webpack config
+
 output
+
 ```js
 output: {
     chunkFilename: '[name].[contenthash:8].js', // eg: app.490e66b3.js
@@ -31,6 +33,7 @@ output: {
 ```
 
 module
+
 ```js
 module: {
     rules: [
@@ -60,6 +63,7 @@ module: {
 ```
 
 plugins
+
 ```js
 plugins: [
     new HtmlWebpackPlugin(), // create index html file
@@ -71,11 +75,13 @@ plugins: [
 ```
 
 ## tailwind
-```
+
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
 ## choo
+
 [https://choo.io/](https://choo.io/)

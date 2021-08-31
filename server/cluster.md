@@ -1,12 +1,14 @@
 # Nginx load balancer 负载均衡集群
 
 ## method
+
 * round-robin -- requests to the application servers are distributed in a round-robin fashion,
 * least-connected -- next request is assigned to the server with the least number of active connections,
 * ip-hash -- a hash-function is used to determine what server should be selected for the next request(based on the client's IP address)
 
-# deploy
-```
+## deploy
+
+```text
 http {
     upstream backend {
         server 10.1.0.1 weight=2 max_fails=3 fail_timeout=3s;

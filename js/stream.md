@@ -1,12 +1,16 @@
+# Stream
+
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
 
 ## Types of Streams
+
 * Writable
 * Readable
 * Duplex
 * Transform
 
 ## example
+
 ```js
 const fs = require('fs') 
 const file = fs.createWriteStream('./big')
@@ -26,6 +30,7 @@ server.listen(9001)
 ```
 
 ## compose file
+
 ```js
 #!/usr/bin/env node
 const fs = require('fs')
@@ -49,9 +54,11 @@ compose()
 ```
 
 ## Web APIs
+
 ReadableStream, The `ReadableStream` constructor creates and returns a readable stream object from the given handlers
 
 ## blob to readableStream
+
 ```js
 class BlobStreamController {
     constructor(blob) {
@@ -77,6 +84,7 @@ class BlobStreamController {
 ```
 
 ### demo
+
 ```js
 let result = ''
 function randomChars() {

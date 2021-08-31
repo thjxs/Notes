@@ -1,5 +1,8 @@
+# Shell
+
 ## loop
-```
+
+```sh
 c=('a' 'b' 'c')
 for cc in "${c[@]}";
 do
@@ -8,7 +11,8 @@ done
 ```
 
 ## Condition test
-```
+
+```sh
 str1 = str2   # str1 matches str2
 str1 != str2  # str1 does not matches str2
 str1 < str2   # str1 is less than str2
@@ -18,25 +22,28 @@ str1 > str2   # str1 is greater than str2
 ```
 
 ## shell 重定向 &>file 2>&1 1>&2
-```
+
+```text
 文件描述符 
 0 表示标准输入 
 1 表示标准输出
 2 表示标准错误输出
 ```
+
 ```sh
 command >/dev/null 2>&1  # 将 1 重定向到 /dev/null, 再将 2 重定向到 1，两者都输出到 /dev/null
 command 2>&1 >/dev/null  # 将 2 重定向到 1， 将 1 重定向到 /dev/null
 ```
 
 ## shell 字符串操作
+
 | Operator                | Substitution                                                 |
 | ----------------------- | ------------------------------------------------------------ |
-| ${#string}              | 返回字符串的长度<br /> string=word, ${#string} returns 4     |
-| ${var:=word}            | 如果变量没有定义，给变量设置一个默认值<br />${count:=0}      |
-| ${var:-word}            | 如果变量没有定义，返回一个默认值<br />${count:-0}            |
+| ${#string}              | 返回字符串的长度 string=word, ${#string} returns 4     |
+| ${var:=word}            | 如果变量没有定义，给变量设置一个默认值 ${count:=0}      |
+| ${var:-word}            | 如果变量没有定义，返回一个默认值 ${count:-0}            |
 | ${var:+word}            | 测试一个存在的变量                                           |
-| ${string:offset:length} | string=word <br />${string:2} returns *rd*. <br />${string:2:3} returns *r*. |
+| ${string:offset:length} | string=word ${string:2} returns *rd*. ${string:2:3} returns *r*. |
 
 **path**=/home/tan/book/file.name.md
 
@@ -48,7 +55,7 @@ command 2>&1 >/dev/null  # 将 2 重定向到 1， 将 1 重定向到 /dev/null
 | ${path%.*}   | /home/tan/book/file.name    |
 | ${path%%.*}  | /home/tan/book/file         |
 
-###### replace
+### replace
 
 ```bash
 # 将最长匹配的 *pattern* 替换为 *string* (expecially *#* *%*)
@@ -57,6 +64,7 @@ ${variable//pattern/string}  # all matches are replaced
 ```
 
 ## cut - remove sections from each line of files
+
 ```bash
 #    input field:field2:field3
 #    out field
@@ -64,12 +72,14 @@ cut -d: -f1 < /path/to/files | sort
 ```
 
 ## diff - compare files line by line
+
 ```bash
 # 比较两个文件，把结果输出到 diffline 后台执行
 diff file.txt file.txt.old > diffline &
 ```
 
 ## sort
+
 ```bash
 #!/bin/bash
 #  highest filename [howmany]
@@ -80,6 +90,7 @@ sort -nr $filename | head -$howmany
 ```
 
 ## compress
+
 ```bash
 #!/bin/bash
 filepath=$1
@@ -104,13 +115,16 @@ do
     guetzli --quality 85 --verbose $file ${pathto}${file#\.\/}
 done
 ```
+
 ## wc
-```
+
+```sh
 # 字符长度
 echo string | wc -L
 ```
 
 ## handle input with options
+
 ```sh
 #!/usr/bin/bash
 if [ -n "$(echo $1 | grep '^-[0-9][0-9]*$')" ]; then
@@ -127,6 +141,7 @@ sort -nr $filename | head $howmany
 ```
 
 ## multiple options
+
 ```sh
 while [[ -n "$(echo $1 | grep '-')" ]]; do
     case $1 in
@@ -146,6 +161,7 @@ done
 ```
 
 ## or
+
 ```sh
 
 # if node_modules does't exist, the run yarn

@@ -1,14 +1,18 @@
+# RESTful
+
 `Representational State Transfer`
 使用 **URI** 定位资源，用 **HTTP** 动词描述操作
 
 ## 设计原则
-1. HTTPS 
 
-2. 域名
+* HTTPS
+
+* 域名
      与主域名分开  `https://api.larabbs.com` || `https://www.larabbs.com/api`
 
-3. 版本控制
-    ```
+* 版本控制
+
+    ```text
     # 将版本号加入 URL 中
     https://api.larabbs.com/v1
     https://api.larabbs.com/v2
@@ -19,8 +23,9 @@
         Accept: application/prs.larabbs.v2+json
     ```
 
-4. 用 URL 定位资源
-    ```
+* 用 URL 定位资源
+
+    ```text
     GET /issues
     GET /orgs/:org/issues
     GET /repos/:owner/:repo/issues/:number
@@ -30,19 +35,21 @@
     DELETE /repos/:owner/:repo/issues/:number/lock
     ```
 
-5. 用 HTTP 动词描述操作
+* 用 HTTP 动词描述操作
 
   动词通常就是五种 HTTP 方法（GET, POST, PUT, PATCH, DELETE, 一律为大写），对应 CURD 操作，幂等性 指一次和多次请求一个资源应该有同样的副作用
 
-6. 资源过滤
-    ```
+* 资源过滤
+
+    ```text
     ?state=closed
     ?page=2&per_page=100
     ?sortby=name&order=asc
     ```
 
-7. 状态码
-    ```
+* 状态码
+
+    ```text
     200 OK
     201 Created
     202 Accepted

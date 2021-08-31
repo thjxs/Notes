@@ -1,5 +1,6 @@
-## Nginx config
-```
+# Nginx config
+
+```text
 server {
     listen 80;
     server_name example.com;
@@ -36,6 +37,7 @@ server {
 ```
 
 ## Optimization
+
 > Project's dependencies can be installed much faster when a composer.lock file is present
 
 * `composer install --optimize-autoloader --no-dev`

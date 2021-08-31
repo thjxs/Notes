@@ -1,7 +1,9 @@
 # Running as a daemon
+
 `./bin/elasticsearch -d -p pid`
 
 ## Install
+
 ```bash
 # install signing key
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
@@ -21,6 +23,7 @@ yum install elasticsearch
 ```
 
 ## java env
+
 ```bash
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191
 export PATH=${JAVA_HOME}/bin:$PATH

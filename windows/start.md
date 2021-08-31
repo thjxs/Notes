@@ -1,12 +1,15 @@
 # Start
+
 starts a separate window to run a specified program or command.
 
 open file on typora
-```
+
+```sh
 start typora /path/to/file
 ```
 
 ## specific program
+
 First, open `Registry Editor`, press `win + R`, then type `regedit`.
 find this location: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths`
 

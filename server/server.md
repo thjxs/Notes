@@ -4,17 +4,17 @@
 
 > [nginx](http://nginx.org/en/linux_packages.html#stable)
 
-```
+```sh
 rpm --import http://nginx.org/keys/nginx_signing.key
 rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 yum install nginx 
 ```
 
-
 ## PHP
 
 * centos yum
-```
+
+```sh
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
@@ -24,7 +24,8 @@ rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 > [mysql](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
 
 * yum repository
-```
+
+```sh
 rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 yum repolist all | grep mysql
 yum-config-manager --disable mysql80-community

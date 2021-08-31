@@ -1,7 +1,9 @@
-## Web Workers API
+# Web Workers API
+
 It represents a background task that can be easily created and can send messages back to its creator.
 
 ## demo
+
 ```js
 const workerBlob = new Blob([`function parse (time) {
     const start = new Date()

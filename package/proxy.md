@@ -1,4 +1,4 @@
-## http-proxy-middleware
+# http-proxy-middleware
 
 ```js
 const express = require('express');

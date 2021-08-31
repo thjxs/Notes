@@ -1,4 +1,5 @@
-## filter 
+# filter
+
 change the appearance of an input image
 
 * blur: Blurs the image

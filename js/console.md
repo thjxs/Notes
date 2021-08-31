@@ -1,4 +1,7 @@
+# console
+
 ## timers
+
 ```js
 console.time('answer time');
 setTimeout(function () {
@@ -10,6 +13,7 @@ setTimeout(function () {
 ```
 
 ## traces
+
 ```js
 function foo() {
     function bar() {

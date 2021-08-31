@@ -1,4 +1,5 @@
-## Set
+# Set
+
 The `Set` object lets you store unique values of any type, whether primitive values
 or object references.
 
@@ -16,7 +17,8 @@ const numbers = [2,3,4,5,6,2,3,5]
 console.log([...new Set(numbers)])
 ```
 
-### Implementing basic set operations
+## Implementing basic set operations
+
 ```js
 function isSuperset(set, subset) {
     for (let elem of subset) {
@@ -65,7 +67,9 @@ function difference(setA, setB) {
 ```
 
 ## WeakSet
+
 The `WeakSet` object lets you store weakly held *objects* in a collection
+
 ```js
 const ws = new WeakSet()
 const foo = {}

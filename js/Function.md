@@ -1,5 +1,9 @@
+# Function
+
 ## static
+
 Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children.
+
 ```js
 class Chameleon {
     static colorChange(newColor) {
@@ -33,6 +37,7 @@ boundGetX() //81
 ```
 
 ## apply
+
 The `apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object)
 
 ```js

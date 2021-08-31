@@ -1,4 +1,7 @@
-## Property 
+# Object
+
+## Property
+
 *value*, *writable*, *enumerable*, and *configurable*
 
 ```js
@@ -7,6 +10,7 @@ Object.getOwnPropertyDescriptor({x: 1}, 'x');
 ```
 
 ## Getters and Setters
+
 Properties defined by getters and setters are sometimes known as *accessor properties* to distinguish them from *data properties* that have a simple value.
 
 ```js
@@ -31,6 +35,7 @@ var p = {
 ```
 
 ## `__proto__`
+
 It will overwrite Object's method, be careful using in production.
 
 ```js
@@ -42,6 +47,7 @@ console.log(anotherCache.foo)
 ```
 
 ## Private field declarations
+
 ```js
 class Rectanble {
     #height = 0;
@@ -61,6 +67,7 @@ class Rectanble {
 * Returns `this` if the function doesn't return its own object
 
 ## eg
+
 ```js
 function Person(fn, ln) {
     this.firstName = fn
@@ -72,6 +79,7 @@ const sarah = Person('Sarah', 'Smith') // this refers to the global object
 ```
 
 ## Object keys
+
 Object keys are automatically converted into strings.
 
 ```js

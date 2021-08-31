@@ -1,17 +1,21 @@
-## Context
+# Context
+
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-### API
+## API
+
 * createContext
 * Provider
 * contextType // class component
 * Context.Consumer // function component
 * Context.displayName
 
-### Hooks
+## Hooks
+
 * useContext
 
-### example
+## example
+
 ```js
 // context
 import React from 'react'

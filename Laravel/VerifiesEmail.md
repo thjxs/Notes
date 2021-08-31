@@ -1,4 +1,5 @@
-## VerifiesEmails
+# VerifiesEmails
+
 ```php
 public function verify(Request $request) 
 {
@@ -28,6 +29,7 @@ public function resend(Request $request)
 ```
 
 ## Traits
+
 ```php
 trait MustVerifyEmail
 {

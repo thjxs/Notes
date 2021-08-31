@@ -1,4 +1,5 @@
-## drop
+# drop
+
 The **`drop`** event is fired when an element or text selection is dropped on a valid
 drop target.
 
@@ -31,6 +32,7 @@ droptarget.ondrop = function(e) {
 ```
 
 ## example
+
 ```html
 <div class='dropzone'>
     <div id='draggable' draggable='true' ondragstart="event.dataTransfer.setData('text/plain', null)">
@@ -54,6 +56,7 @@ droptarget.ondrop = function(e) {
 }
 </style>
 ```
+
 ```js
 var dragged;
 document.addEventListener('drag', function (e) {}, false);

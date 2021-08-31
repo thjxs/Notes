@@ -1,4 +1,5 @@
-## playbook
+# playbook
+
 ```yml
 ---
 - name: apply configuration to all nodes

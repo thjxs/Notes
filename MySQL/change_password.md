@@ -1,4 +1,6 @@
-# centos
+# Change password
+
+## centos
 
 * vim /etc/my.cnf
 add: skip-grant-tables
@@ -9,7 +11,7 @@ add: skip-grant-tables
 
 * remove my.cnf changes and restart service
 
-# Ubuntu
+## Ubuntu
 
 * cat /etc/mysql/debian.cnf
 

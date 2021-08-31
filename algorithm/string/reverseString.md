@@ -1,4 +1,4 @@
-## reverse string
+# reverse string
 
 ```js
 var reverseString(s) {

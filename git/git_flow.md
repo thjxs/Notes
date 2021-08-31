@@ -1,8 +1,12 @@
+# Git flow
+
 ## init
+
 `git flow init`
 
 ## config
-```
+
+```text
 [gitflow "branch"]
         master = master
         develop = develop
@@ -18,6 +22,7 @@
 ```
 
 ### feature
+
 `git flow feature start <feature>`
 
 // a few changes
@@ -26,6 +31,7 @@
 `git flow feature finish <feature>`
 
 ### release
+
 `git flow release start <version>`
 
 //finish

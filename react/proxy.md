@@ -4,9 +4,10 @@
 * create `src/setupProxy.js` file
 
 ## Configuring the proxy manually
+
 First, add `http-proxy-middleware` [package](https://github.com/chimurai/http-proxy-middleware#http-proxy-options), then create `src/setupProxy.js`
 
-```
+```js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {

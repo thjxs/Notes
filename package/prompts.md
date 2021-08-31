@@ -1,6 +1,7 @@
 # interactive [prompts](https://github.com/terkelg/prompts)
 
 ## usage
+
 ```js
 const prompts = require('prompts');
 

@@ -1,3 +1,5 @@
+# Database migrations
+
 | Command | Description |
 |---------|:-----------:|
 |$table->bigIncrements('id');  |      Auto-incrementing UNSIGNED BIGINT (primary key) equivalent column.  |

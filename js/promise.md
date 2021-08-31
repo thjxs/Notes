@@ -1,10 +1,14 @@
-## The *Promise* object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+# Promise
 
-### Syntax
+The *Promise* object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value
+
+## Syntax
+
 `new Promise(executor)`
 the executor is called before the `Promise` constructor even returns the created object
 
 A `Promise` is in one of these states:
+
 * pending
 * fulfilled
 * rejected
@@ -23,6 +27,7 @@ promise.then(console.log).catch(console.log)
 ```
 
 ## all
+
 ```js
 function countdown(seconds) {
     return new Promise(function(resolve, reject) {
@@ -44,6 +49,7 @@ Promise.all([countdown(6), countdown(8)]).then(res => {
 ```
 
 ## async map
+
 ```js
 const assert = require('assert');
 function timesTwoAsync(x) {
@@ -58,7 +64,8 @@ Promise.all(promiseArr).then(result => {
 ```
 
 ## race
-The `Promise.race()` method returns a promise that fulfills or rejects 
+
+The `Promise.race()` method returns a promise that fulfills or rejects
 as soon as one of the promise in an iterable fulfills or rejects, with the value
 or reason from that promise
 
@@ -69,6 +76,7 @@ Promise.race([countdown(3), countdown(5)]).then(value => {
 ```
 
 ## Converting callbacks to promises
+
 ```js
 const fs = require('fs')
 fs.readFile(filePath, options, callback)

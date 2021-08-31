@@ -1,3 +1,5 @@
+# Alias
+
 ```bash
  alias install="sudo yum install -y"
  alias update="sudo yum update -y"

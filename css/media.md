@@ -1,16 +1,19 @@
 # Meddia queries
 
 ## media query syntax
+
 ```css
 @media not|only (media type) and (expressions) {
-	//css
+ //css
 }
 ```
 
 ## media type
+
 all print screen speech
 
 ## Media features
+
 * any-hover
 * any-pointer
 * aspect-ratio
@@ -37,6 +40,7 @@ all print screen speech
 * width
 
 ## dark mode
+
 prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 
 ```css
@@ -49,6 +53,7 @@ prefers-color-scheme: Detect if the user prefers a light or dark color scheme
 ```
 
 ## hover
+
 ```css
 button {
 
@@ -78,19 +83,21 @@ button {
 大屏幕 1200px
 
 ## 图片
+
 设置 *max-width* 图片不会大于其原始大小
 
 ## demo
+
 ```css
 @media screen and (min-width: 480px) {
-	body {
-		background-color: lightgreen;
-	}
+ body {
+  background-color: lightgreen;
+ }
 }
 
 @media screen and (min-width: 480px) {
-	#leftsidebar { width: 200px; float: left; }
-	#main { margin-left: 216px; }
+ #leftsidebar { width: 200px; float: left; }
+ #main { margin-left: 216px; }
 }
 
 // media queries in link tags

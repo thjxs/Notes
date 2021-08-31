@@ -1,4 +1,5 @@
-## Inter Process Communication
+# Inter Process Communication
+
 Electron 有多个渲染进程和一个主进程
 
 ```js
@@ -15,6 +16,7 @@ ipcRenderer.on('msg', (ev, arg) => {
 ```
 
 ## multiple renderer process
+
 ```js
 // main
 let w1, w2

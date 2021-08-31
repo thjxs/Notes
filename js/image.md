@@ -1,6 +1,9 @@
+# Image
+
 使用 `crossorigin` 属性和合适的 `CORS` 响应头，就能够实现在画布中使用跨域 `<img>` 元素的图像
 
 ## 存储外部域的图片
+
 ```js
 function download(url) {
     const img = new Image()

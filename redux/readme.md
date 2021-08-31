@@ -1,12 +1,18 @@
+# Redux
+
 ## [action](actions)
+
 An action is a plain JavaScript object that describes what happened
+
 ```js
 {type: 'ADD_TODO', text: 'go to swimming pool'}
 {type: 'TOGGLE_TODO', index: 1}
 ```
 
 ### action creators
+
 action creators simply return an action
+
 ```js
 function addTodo(text) {
     return {
@@ -17,6 +23,7 @@ function addTodo(text) {
 ```
 
 ## [reducer](reducers)
+
 takes state and action as arguments, and returns the next state of the app.
 
 * **DO NOT** mutate the state
@@ -31,7 +38,9 @@ function visibilityFilter(state = 'SHOW_ALL', action) {
     }
 }
 ```
+
 ## tutorial
+
 ```js
 function visibilityFilter(state = 'SHOW_ALL', action) {
     switch (action.type) {

@@ -1,4 +1,4 @@
-## sed 流编辑器
+# sed 流编辑器
 
 > [Sed 命令完全指南](https://linux.cn/article-10232-1.html)
 
@@ -17,7 +17,8 @@ sed '1d;5d;9d;$d' input.txt
 sed 's/"test"/"newValue"' path/to/file
 ```
 
-### Replace
+## Replace
+
 ```bash
 # example file
 # 1 Unix unix unix 23

@@ -1,4 +1,5 @@
 # Dependency injection
+
 ```php
 interface SuperModuleInterface
 {
@@ -26,7 +27,8 @@ class Superman
 $superman = new Superman(new XPower);
 ```
 
-# IoC
+## IoC
+
 ```php
 class Container
 {
@@ -70,7 +72,8 @@ class Container
 }
 ```
 
-# example
+## example
+
 ```php
 $container = new Container;
 $container->bind('superman', function ($container, $ability) {

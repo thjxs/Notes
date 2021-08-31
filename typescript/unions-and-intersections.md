@@ -1,5 +1,8 @@
-# Unions Types
-```
+# Unions and intersections
+
+## Unions Types
+
+```text
 type NetworkLoadingState = {
   state: "loading";
 };
@@ -26,8 +29,9 @@ type NetworkState =
   | NetworkSuccessState;
 ```
 
-# Intersection Types
-```
+## Intersection Types
+
+```text
 interface ErrorHandling {
     success: boolean;
     error: {message: string}

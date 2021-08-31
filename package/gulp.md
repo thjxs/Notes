@@ -1,7 +1,9 @@
 # gulp
+
 A toolkit to automate & enhance your workflow
 
 ## build typescript
+
 ```js
 const gulp = require('gulp')
 const browserify = require('browserify')
@@ -24,6 +26,7 @@ gulp.task('build', () => browserify(option) // require('modules') in the browser
 ```
 
 ## change json file
+
 ```js
 const gulp = require('gulp')
 const {Transform} = require('stream')

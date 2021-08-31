@@ -12,6 +12,7 @@ Compress-Archive @compress
 ```
 
 ## get file hash
+
 ```ps
 Get-FileHash .\file
 ```

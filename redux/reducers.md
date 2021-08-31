@@ -1,4 +1,7 @@
+# Usage
+
 ## designing the state shape
+
 ```js
 {
     visibilityFilter: 'SHOW_ALL',
@@ -16,12 +19,15 @@
 ```
 
 ## handling actions
+
 The reducer is a pure function that takes the previous state and an action, and returns the next state.
+
 ```js
 (previousState, action) => newState
 ```
 
 ## example
+
 ```js
 import { combineReducers } from 'redux'
 import {

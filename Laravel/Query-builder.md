@@ -4,6 +4,7 @@
 `$users = DB::table('users')->get();`
 
 * 从数据表中获取单行或列
+
 ```php
 // 获取整行
 $user = DB::table('users')->where('name', 'John')->first();
@@ -15,18 +16,22 @@ $titles = DB::table('roles')->pluck('title');
 // 指定字段
 $roels = DB::table('roels')->pluck('title', 'name');
 ```
+
 * 分块结果
 使用 `chunk` 方法可以从数千条需要处理的数据中取出一小块结果，并将结果传递给闭包处理
+
 ``` php
 DB::table('users')->orderBy('id')->chunk(100, function ($users) {
-	foreach($users as $user) {
-		//
-	}
+ foreach($users as $user) {
+  //
+ }
 });
 ```
+
 通过在闭包中返回 `false` 来阻止分块结果
 
 * 聚合
+
 ```php
 # count 
 # max
@@ -43,7 +48,7 @@ $price = \DB::table('orders')->where('finalized', 1)->avg('price');
 // exists() doesntExist();
 `DB::table('orders')->where('finalized', 1)->exists();`
 
-# Selects
+## Selects
 
 * 指定一个 select 语句
 `$users = DB::table('users')->select('name', 'email as user_email')->get();`
@@ -52,84 +57,91 @@ $price = \DB::table('orders')->where('finalized', 1)->avg('price');
 `$users = DB::table('users')->distinct()->get();`
 
 * addSelect() 在现有的 select 语句加入一个字段
+
 ```php
 $query = DB::table('users')->select('name');
 $users = $query->addSelect('age')->get();
 ```
 
-# Joins
+## Joins
 
 ![img](./66zgg.png)
 
 * Inner join
+
 ```php
 $users = DB::table('users')
-	->join('contacts', 'users.id', '=', 'contacts.user_id')
-	->join('orders', 'users.id', '=', 'orders.user_id')
-	->select('users.*', 'contacts.phone', 'orders.price')
-	->get();
+ ->join('contacts', 'users.id', '=', 'contacts.user_id')
+ ->join('orders', 'users.id', '=', 'orders.user_id')
+ ->select('users.*', 'contacts.phone', 'orders.price')
+ ->get();
 // SELECT `users`.*, `contacts`.`phone`, `orders`.`price` FROM `users` 
 // INNER JOIN `contacts` ON `users`.`id` = `contacts`.`user_id`
 // INNER JOIN `orders` ON `users`.`id` = `orders`.`user_id` ;
 ```
 
-* Left Join 
+* Left Join
+
 ```php
 $users = DB::table('users')
-	->leftJoin('posts', 'users.id', '=', 'posts.user_id')
-	->get();
+ ->leftJoin('posts', 'users.id', '=', 'posts.user_id')
+ ->get();
 ```
 
-* Cross Join 
+* Cross Join
 交叉连接在第一个表和连接之间生成笛卡儿积 // ？？？
+
 ```php
 $users = DB::table('users')
-	->crossJoin('colours')
-	->get();
+ ->crossJoin('colours')
+ ->get();
 ```
 
 * Advance Join
+
 ```php
 DB::table('users)
-	->join('contacts', function ($join) {
-		$join->on('users.id', '=', 'contacts.user_id')->orOn(...);
-	})
-	->get();
+ ->join('contacts', function ($join) {
+  $join->on('users.id', '=', 'contacts.user_id')->orOn(...);
+ })
+ ->get();
 ```
 
-# Unions
+## Unions
 
 把两个查询联合起来
+
 ```php
 $first = DB::table('users')
-	->whereNull('first_name');
+ ->whereNull('first_name');
 
 $users = DB::table('users')
-	->whereNull('last_name')
-	->union($first)
-	->get();
+ ->whereNull('last_name')
+ ->union($first)
+ ->get();
 ```
 
-# Where
+## Where
 
 查询构建器的 `where` 方法需要三个参数
 列名 运算符 比较的值
 
 `$users = DB::table('users')->where('votes', '=', 100)->get()`
 
-```
+```php
 $usres = DB::table('users')->where([
-	['status', '=', '1'],
-	['subscribed', '<>', '1'],
+ ['status', '=', '1'],
+ ['subscribed', '<>', '1'],
 ])->get();
 ```
 
 Or
-```
+
+```php
 $users = DB::table('users')
-	->where('votes', '>', 199)
-	->orWhere('name', 'John')
-	->get();
+ ->where('votes', '>', 199)
+ ->orWhere('name', 'John')
+ ->get();
 ```
 
 whereBetween
@@ -146,62 +158,68 @@ whereDate / whereMonth / whereDay / whereYear / whereTime
 whereColumn
 
 参数分组
-```
+
+```php
 DB::table('users')
-		->where('name', '=', 'John')
-		->orWhere(function ($query) {
-			$query->where('votes', '>', 100)
-					->where('title', '<>', 'Admin');
-		})
-		->get();
+  ->where('name', '=', 'John')
+  ->orWhere(function ($query) {
+   $query->where('votes', '>', 100)
+     ->where('title', '<>', 'Admin');
+  })
+  ->get();
 // equal to select * from users where name = 'John' or (votes > 100 and title <> 'Admins')
 ```
 
 whereExists //???
-```
+
+```php
 DB::table('users')
-	->whereExists(function ($query) {
-		$query->select(DB::raw(1))
-			->from('orders')
-			->whereRaw('orders.user_id = users.id');
-	})
-	->get();
+ ->whereExists(function ($query) {
+  $query->select(DB::raw(1))
+   ->from('orders')
+   ->whereRaw('orders.user_id = users.id');
+ })
+ ->get();
 ```
 
 JSON Where
-```
+
+```php
 $users = DB::table('users')
-	->where('options->language', 'en')
-	->get();
+ ->where('options->language', 'en')
+ ->get();
 $users = DB::table('users')
-	->where('preferences->dining->meal', 'salad')
-	->get();
+ ->where('preferences->dining->meal', 'salad')
+ ->get();
 ```
 
-# Ordering, Grouping, Limit & Offset
+## Ordering, Grouping, Limit & Offset
 
 orderBy
-```
+
+```php
 $users = DB::table('users')
-	->orderBy('name', 'desc')
-	->get();
+ ->orderBy('name', 'desc')
+ ->get();
 ```
 
 latest / oldest
 
 inRandomOrder
-```
+
+```php
 $randomUser = DB::table('users')
-	->inRandomOrder()
-	->first();
+ ->inRandomOrder()
+ ->first();
 ```
 
 groupBy / having
-```
+
+```php
 $users = DB::table('users')
-	->groupBy('account_id')
-	->having('account_id', '>', 100)
-	->get();
+ ->groupBy('account_id')
+ ->having('account_id', '>', 100)
+ ->get();
 ```
 
 skip / take
@@ -209,73 +227,79 @@ skip / take
 or
 `DB::table('users')->offset(10)->limit(5)->get();`
 
-# 条件语句
-```
+## 条件语句
+
+```php
 $role = $request->input('role');
 
 $users = DB::table('users')
-	->when($role, function ($query) use ($role) {
-		return $query->where('role_id', $role);
-	})
-	->get();
+ ->when($role, function ($query) use ($role) {
+  return $query->where('role_id', $role);
+ })
+ ->get();
 ```
 
 一个查询的默认排序
-```
+
+```php
 $sortBy = null
 
 $users = DB::table('users')
-	->when($sortBy, function ($query) use ($sortBy) {
-		return $query->orderBy($sortBy);
-	}, function ($query) {
-		return $query->orderBy('name');
-	})
-	->get();
+ ->when($sortBy, function ($query) use ($sortBy) {
+  return $query->orderBy($sortBy);
+ }, function ($query) {
+  return $query->orderBy('name');
+ })
+ ->get();
 ```
 
-# 插入
+## 插入
 
 insert
-```
+
+```php
 DB::table('users')->insert(
-	['email' => 'john@example.com', 'votes' => 0]
+ ['email' => 'john@example.com', 'votes' => 0]
 );
 
 ```
 
 insertGetId
-```
+
+```php
 $id = DB::table('users')->insertGetId(
-	['email' => 'john@example.com', 'votes' => 0]
+ ['email' => 'john@example.com', 'votes' => 0]
 );
 ```
 
-# 更新
+## 更新
 
-```
+```php
 DB::table('users')
-	->where('id', 1)
-	->update(['votes' => 1]);
+ ->where('id', 1)
+ ->update(['votes' => 1]);
 
 // JSON
 DB::table('users')
-	->where('id', 1)
-	->update(['options->enabled' => 1]);
+ ->where('id', 1)
+ ->update(['options->enabled' => 1]);
 ```
 
 自增与自减
 increment & decrement
 
-# 删除
-```
+## 删除
+
+```php
 DB::table('users')->delete();
 DB::table('users')->where('votes', '>', 100)->delete();
 //清空表
 DB::table('users')->truncate();
 ```
 
-# 悲观锁
-```
+## 悲观锁
+
+```php
 DB::table('users')->where('votes', '>', 100)->shareLock()->get();
 DB::table('users')->where('votes', '>', 100)->lockForUpdate()->get();
 ```

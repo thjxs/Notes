@@ -1,4 +1,4 @@
-## match parentheses
+# match parentheses
 
 ```js
 let isValid = function (str) {

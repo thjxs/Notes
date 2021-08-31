@@ -1,4 +1,4 @@
-#### Retrieving Information from a Table
+# Retrieving Information from a Table
 
 ```sql
 SELECT what_to_select
@@ -18,8 +18,6 @@ WHERE conditions_to_satisfy;
    SELECT * FROM pet WHERE (species = 'dog' AND sex = 'f') OR (species = 'cat' AND sex = 'm');
    ```
 
-   
-
 3. selecting particular columns
 
    ```sql
@@ -27,8 +25,6 @@ WHERE conditions_to_satisfy;
    SELECT DISTINCT owner FROM pet;
    SELECT name, species, birth FROM pet WHERE species = 'dog' OR species = 'cat';
    ```
-
-   
 
 4. sorting rows (order by)
 
@@ -38,18 +34,12 @@ WHERE conditions_to_satisfy;
    SELECT name, species, birth FROM pet ORDER BY species, birth DESC;
    ```
 
-   
-
 5. date calculations (timestampdiff)
 
    ```SQL
    SELECT name, birth, CURDATE(), TIMESTAMPDIFF(YEAR, birth, CURDATE()) AS age FROM pet;
    SELECT name, birth MONTH(birth) FROM pet;
    ```
-
-   
-
-   
 
 6. counting rows (count)
 
@@ -70,5 +60,3 @@ WHERE conditions_to_satisfy;
    ON pet.name = event.name
    WHERE event.type = 'litter';
    ```
-
-   

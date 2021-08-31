@@ -1,5 +1,8 @@
+# nginx
+
 ## limiting bandwidth
-```
+
+```text
 location /download/ {
     limit_rate_after 500K;
     limit_rate 50K;
@@ -7,7 +10,8 @@ location /download/ {
 ```
 
 ## location
-```
+
+```text
 location / {
     root /path/to/project_a;
     index index.html index.htm;

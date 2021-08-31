@@ -1,5 +1,6 @@
 # Nginx
-```
+
+```text
 server {
     server_name domain.com
     listen 443 ssl http2 default_server;

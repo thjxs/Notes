@@ -16,7 +16,7 @@ def run():
             year = doc.select_one(':nth-child(4)>a').get_text()
             scientific_name = 'none' if doc.select_one(':nth-child(6)>a') is None else doc.select_one(':nth-child(6)>a').get_text()
             common_name = 'none' if doc.select_one(':nth-child(8)>a') is None else doc.select_one(':nth-child(8)>a').get_text()
-            thumb = div.select_one('div.thumb-frame>a>img')['src']
+            thumb = div.select_one['div.thumb-frame>a>img']('src')
             id = (index + 1) * 20 + div_idx + 1
             info = FruitInfo(id, artist, year, scientific_name, common_name, thumb)
             info.save()

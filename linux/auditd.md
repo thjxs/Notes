@@ -1,4 +1,6 @@
-```
+# Auditd
+
+```text
 
     ^__^
     (OO)\_______
@@ -8,13 +10,17 @@
 
 
 ```
-# Add rules
+
+## Add rules
+
 ```sh
 auditctl -l
 auditctl -w /pathto/file -p rwxa
 auditctl -w /path/directory
 ```
-# Log
+
+## Log
+
 ```sh
 ausearch -f file
 aureport

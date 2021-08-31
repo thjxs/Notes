@@ -1,7 +1,9 @@
-## TypedArray
+# TypedArray
+
 一个类型化数组对象描述了一个底层的二进制数据缓冲区（binary data buffer）的一个类数组视图（view）。
 
 ## 语法
+
 ```js
 new TypedArray()
 

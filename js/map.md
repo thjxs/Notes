@@ -1,4 +1,5 @@
-## Map
+# Map
+
 The `Map` object holds key-value pairs and remembers the original insertion order of the keys.
 Any value (both objects and primitive values) may be used as either a key or a value.
 
@@ -51,7 +52,9 @@ const second = new Map([
 const merge = new Map([...first, ...second])
 
 ```
+
 ## WeakMap
+
 ```js
 const wm1 = new WeakMap()
 const wm2 = new WeakMap()

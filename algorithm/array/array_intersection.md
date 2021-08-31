@@ -1,4 +1,4 @@
-## 计算两个数组的交集
+# 计算两个数组的交集
 
 ```js
 var intersec = function(nums1, nums2) {

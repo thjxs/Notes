@@ -1,4 +1,4 @@
-## Generic Types
+# Generic Types
 
 ```typescript
 // T: type variable
@@ -37,7 +37,6 @@ loggingIdentity({ length: 10, value: 3 });
 
 ```typescript
 function getProperty<T, K extends keyof T>(obj: T, key: K) {
-	return obj[key]
+ return obj[key]
 }
 ```
-

@@ -1,4 +1,5 @@
-## Merging Interfaces
+# Merging Interfaces
+
 ```typescript
 interface Cloner {
     clone(n: number): number;

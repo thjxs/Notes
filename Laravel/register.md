@@ -1,4 +1,5 @@
-## register
+# register
+
 ```php
 /**
  * Handle a registration request

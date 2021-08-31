@@ -1,13 +1,19 @@
+# Types
+
 ## Ref
-```
+
+```text
 ref: React.RefObject<HTMLInputElement> = React.createRef()
 ```
+
 ## Event
-```
+
+```text
 onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {}
 ```
 
 ## User-Defined Type Guards
+
 ```typescript
 function isFish(pet: Fish | Bird): pet is Fish {
     return (pet as Fish).swim !== undefined
@@ -22,6 +28,7 @@ if (isFish(pet)) {
 ```
 
 ## Index types and index signatures
+
 ```typescript
 interface Dictionary<T> {
     [key: string]: T
@@ -35,6 +42,7 @@ let value: Dictionary<number>['foo']
 ```
 
 ## Conditional Types
+
 type relationship test: **T extends U ? X : Y**
 T is assignable to U the type is X, otherwise the type is Y
 

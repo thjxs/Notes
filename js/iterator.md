@@ -1,4 +1,5 @@
-## iterator
+# iterator
+
 ```js
 function getRainbowIterator() {
     const colors = ['red', 'orange', 'yellow', 'green',

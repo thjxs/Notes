@@ -1,8 +1,8 @@
 # some rules about responsive web design
 
-* Don't set breakpoints to popular device widths 
+* Don't set breakpoints to popular device widths
 
-# Responsive images
+## Responsive images
 
 * srcset
 
@@ -15,7 +15,7 @@ size="(min-width: 17em) 100vw, (min-width: 40em) 50vw"
 src="scones-small.jpg">
 ```
 
-# CSS3
+## CSS3
 
 * The anatomy of a CSS rule (what defines a rule, declaration and property, and value pairs)
 * Quick and handy CSS triicks for responsive designs (multiple columns, word wraps, truncation/text ellipsis, scrolling areas)

@@ -1,5 +1,6 @@
 # Literal Types
-```
+
+```text
 interface ValidationSuccess {
     isValid: true;
     reason: null;

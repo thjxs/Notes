@@ -1,5 +1,6 @@
-## settings
-```
+# settings
+
+```text
 {
     "font_size": 12,
     "highlight_line": true,

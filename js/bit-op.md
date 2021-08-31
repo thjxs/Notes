@@ -1,7 +1,8 @@
 # bit operation
 
 ## >>> (zero fill right shift)
-```
+
+```text
 9 (base 10): 00000000000000000000000000001001 (base 2)
 9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 

@@ -10,8 +10,8 @@ class ListNode
 public:
     ListNode();
     ~ListNode();
-    ListNode* reverseList(ListNode* head) {
-        ListNode* res = NULL;
+    ListNode*reverseList(ListNode* head) {
+        ListNode*res = NULL;
         ListNode* tmp = head;
         while(head != NULL) {
             head = head->next;
@@ -21,8 +21,8 @@ public:
         }
         return res;
     }
-    ListNode* middleNode(ListNode* head) {
-        ListNode* fast = head;
+    ListNode*middleNode(ListNode* head) {
+        ListNode*fast = head;
         ListNode* slow = head;
         while(fast && fast->next) {
             fast = fast->next->next;
@@ -30,7 +30,7 @@ public:
         }
         return slow;
     }
-    bool isPalindromePro(ListNode* head) {
+    bool isPalindromePro(ListNode*head) {
         if (head == NULL || head->next == NULL)
         {
             return true;

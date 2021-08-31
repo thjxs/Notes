@@ -1,10 +1,14 @@
-# find
+# Command
+
+## find
+
 1. 批量删除文件
 ` find ./ -name "*.log" -exec rm -rf {} \; `
 2. 修改子目录的文件权限
 `find -type f -exec chmod 644 {} \;`
 
-# 批量修改文件名
+## 批量修改文件名
+
 ```bash
 #!/bin/bash
 for files in $(find ./ -iname "*.jpg")
@@ -14,7 +18,9 @@ do
     mv $files $filename
 done
 ```
-# 读取文件的指定行数并输出到另一个文件
+
+## 读取文件的指定行数并输出到另一个文件
+
 ```bash
 #!/bin/bash
 file="/etc/passwd"
@@ -29,7 +35,9 @@ done
 # 关闭标指输出
 exec 3>&-
 ```
-# 创建目录 文件 列出文件或目录
+
+## 创建目录 文件 列出文件或目录
+
 ```bash
 #!/bin/bash
 date
@@ -42,7 +50,9 @@ ls [ax6]*
 # 列出 字母跟数字开头的文件
 ls [[:alpha:]][[:digit:]]*
 ```
-# cp
+
+## cp
+
 ```sh
 # 同一个目录复制多个文件
 cp path/{f1,dir1,f2,dir2} path/target
@@ -51,13 +61,15 @@ cp path/{f1,dir1,f2,dir2} path/target
 cp /path/pre{1..3} path/target
 ```
 
-# mv
+## mv
+
 ```sh
 # rename "foo-bar" to "foo-baz"
 mv foo{-bar, -baz}
 ```
 
-# info
+## info
+
 ```sh
 df -h
 free

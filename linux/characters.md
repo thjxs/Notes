@@ -1,9 +1,13 @@
-## command separator [semicolon] 
+# Characters
+
+## command separator [semicolon]
+
 ```sh
 echo hello; echo hi
 ```
 
 ## Terminator in a case option [double semicolon]
+
 ```sh
 case "$variable" in
     abc) echo "\$variable = abc" ;;
@@ -11,13 +15,17 @@ case "$variable" in
 ```
 
 ## partial quoting [double quote]
+
 "*STRING*" preserves (from interpretation) most of the special characters within *STRING*
 
 ## full quoting [single quote]
+
 '*STRING*' preserves all special characters within *STRING*. This is a stronger from of quoting than "*STRING*"
 
 ## comma operator
+
 The comma operator links together a series of arithmetic operations. All are evaluated, but only the last one is returned
+
 ```sh
 # concatenate string
 # echo /{,usr/}bin
@@ -31,19 +39,23 @@ done
 ```
 
 ## variable substitution (contents of a variable)
+
 ```sh
 name=xiaoming
 echo $name # xiaoming
 ```
 
 ## parameter substitution
+
 May be used for concatenating variables with strings
+
 ```sh
 PATH=${PATH}:/opt/bin
 ```
 
 ${parameter-default}, ${parameter:-default}
 if parameter not set, use default
+
 ```sh
 var1=1
 var2=2
@@ -57,20 +69,23 @@ echo "${variable:-1}" # 1
 
 ${parameter=default}, ${parameter:=default}
 if parameter not set, set it to default
+
 ```sh
 echo ${var=abc} # abc
 echo ${var=xyz} # abc
 ```
 
-*more about abs-guide p131*
+More about *abs-guide p131*
 
 ## quoted string expansion
+
 ```sh
 quote=$'\042'
 echo $quote # "
 ```
 
 ## positional parameters $* $@
+
 ```sh
 index=1
 for arg in "$@"
@@ -93,7 +108,8 @@ done
 ```
 
 ## shell $ sign
-```
+
+```text
 $$
 shell process ID
 $!
@@ -115,6 +131,7 @@ arguments value
 ```
 
 ## brace expansion
+
 ```sh
 echo \"{a,b,c}\" # "a" "b" "c"
 

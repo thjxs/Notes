@@ -1,4 +1,7 @@
+# Async
+
 ## Promise
+
 ```js
 function countdown(seconds) {
     return new Promise((resolve, reject) => {
@@ -14,6 +17,7 @@ function countdown(seconds) {
 ```
 
 ## yield
+
 ```js
 function* interrogate() {
     const name = yield 'name';
@@ -37,8 +41,10 @@ function grun(g) {
 ```
 
 ## async
+
 Return value: A `Promise` which sill be resolved with the value returned by the async
 function, or rejected with an uncaught exception thrown from within the async function
+
 ```js
 function resolveAfter2Seconds(x) {
     return new Promise(resolve => {
