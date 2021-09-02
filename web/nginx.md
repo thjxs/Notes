@@ -24,3 +24,20 @@ location /another {
 }
 
 ```
+
+### check if file exist
+
+* -f file
+* -d directory
+* -e file or directory
+* -x executable
+
+```text
+location / {
+    if (!-f $request_filename) {
+        rewrite ^(.*)$ /$1.html last;
+        break;
+    }
+    index index.html;
+}
+```
