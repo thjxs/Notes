@@ -41,3 +41,22 @@ location / {
     index index.html;
 }
 ```
+
+## try_files
+
+> [http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
+
+Checks the existence of files in the specified order and uses the first found file for request processing.
+
+```text
+location / {
+    index index.html;
+    try_files $uri $uri/index.html $uri.html = 404;
+}
+```
+
+Such as `/docs`, has following match.
+* /docs
+* /docs/index.html
+* /docs.html
+* 404
