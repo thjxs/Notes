@@ -117,3 +117,55 @@ function Counter() {
     // dispatch({type: 'in'})
 }
 ```
+
+## useCallback
+Returns a memoized callback.
+```js
+const memoizedCallback = useCallback(() => doSomething(a, b), [a,b])
+```
+
+## useMemo
+Returns a memoized value.
+```js
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
+```
+
+## useRef
+```js
+const ref = useRef(initialValue)
+```
+
+```jsx
+function TextWithFocusButton() {
+    const ref = useRef(null)
+
+    const click = () => {
+        ref.current?.focus()
+    }
+
+    return (
+        <>
+            <input ref={ref} type="text">
+            <button onClick={click}>Focus</button>
+        </>
+    )
+}
+```
+
+### use case
+```js
+function Timer() {
+    const intervalRef = useRef()
+
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            // ...
+        })
+
+        return () => {
+            clearInterval(intervalRef.current)
+        }
+    })
+}
+
+```
