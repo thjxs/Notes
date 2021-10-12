@@ -1,5 +1,13 @@
 # Types
 
+## primitives
+`string`, `number`,`boolean`
+
+## Tuple types
+```typescript   
+type StringNumberPair = [string, number]
+```
+
 ## Ref
 
 ```text
