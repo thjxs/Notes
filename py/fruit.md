@@ -1,3 +1,7 @@
+# Fruit
+
+## Example
+```py
 import requests
 import json
 from bs4 import BeautifulSoup
@@ -41,3 +45,4 @@ class FruitInfo:
 
 if __name__ == '__main__':
     run()
+```
