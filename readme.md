@@ -19,6 +19,7 @@ A major part of software engineering is building components that not only have w
 - [git](https://git-scm.com/book/zh/)
 - [javascript approach way](https://github.com/airbnb/javascript)
 - [Docker](https://docs.docker.com/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
 
 ## News
 
