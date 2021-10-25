@@ -1,4 +1,11 @@
-# Debounce
+# Debounce & Throttle
+
+* throttling: sample changes based on a time based frequency
+* debouncing: publish changes after a period of inactivity
+
+[comparison of throttle and debounce](http://demo.nimius.net/debounce_throttle/)
+
+## Debounce
 
 ```js
 function debounce(func, wait) {
