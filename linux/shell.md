@@ -8,6 +8,13 @@ for cc in "${c[@]}";
 do
     echo $cc
 done
+
+names=`git diff $hash --name-only --stat`
+
+for name in $names
+do
+    # ...
+done
 ```
 
 ## Condition test
