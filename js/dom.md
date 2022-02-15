@@ -54,3 +54,11 @@ const hasClass = (el, className) => el.classList.contains(className);
 
 hasClass(document.querySelector('p.special'), 'special');
 ```
+
+## getElementsByClassName
+
+elements is a live `HTMLCollection` of found elements
+
+## querySelectorAll
+
+returns a static (not live) `NodeList`
