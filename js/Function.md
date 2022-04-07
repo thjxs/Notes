@@ -40,11 +40,14 @@ boundGetX() //81
 
 The `apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object)
 
+> Beware of argument length
+
 ```js
 var numbers = [5, 6, 2, 3, 7]
 var max = Math.max.apply(null, numbers) // 7
 
 var array = ['a', 'b']
 var elements = [0, 1, 2]
+// similar to array.concat(elements), but it creates a new array
 array.push.apply(array, elements) // ['a', 'b', 0, 1, 2]
 ```
