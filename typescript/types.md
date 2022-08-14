@@ -1,10 +1,12 @@
 # Types
 
 ## primitives
+
 `string`, `number`,`boolean`
 
 ## Tuple types
-```typescript   
+
+```typescript
 type StringNumberPair = [string, number]
 ```
 

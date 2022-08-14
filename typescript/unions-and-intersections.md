@@ -2,7 +2,7 @@
 
 ## Unions Types
 
-```text
+```typescript
 type NetworkLoadingState = {
   state: "loading";
 };
@@ -31,7 +31,7 @@ type NetworkState =
 
 ## Intersection Types
 
-```text
+```typescript
 interface ErrorHandling {
     success: boolean;
     error: {message: string}
