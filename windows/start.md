@@ -8,6 +8,12 @@ open file on typora
 start typora /path/to/file
 ```
 
+Open repository via smerge (Add `C:\Program Files\Sublime Merge` to system path)
+
+```sh
+start smerge /path/to/repository
+```
+
 ## specific program
 
 First, open `Registry Editor`, press `win + R`, then type `regedit`.
