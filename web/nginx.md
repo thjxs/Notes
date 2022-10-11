@@ -60,3 +60,30 @@ Such as `/docs`, has following match.
 * /docs/index.html
 * /docs.html
 * 404
+
+## upstream
+
+```
+upstream app_server {
+    server 127.0.0.1:3000;
+}
+
+server {
+    listen 80;
+    server_name app;
+    root /home/www;
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Nginx-Proxy true;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_max_temp_file_size 0;
+        proxy_pass http://app_server/;
+        proxy_redirect off;
+        proxy_read_timeout 240s;
+    }
+}
+```
