@@ -34,3 +34,9 @@ const state = atom({
 
 const [value, setValue] = useRecoilState(state)
 ```
+
+## blurhash
+
+[https://github.com/woltapp/blurhash](https://github.com/woltapp/blurhash)
+
+A very compact representation of a placeholder for an image.
