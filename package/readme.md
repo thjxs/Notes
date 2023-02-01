@@ -35,7 +35,7 @@ npm login
 # check registry
 npm config get registry
 # with scope (@thjxs/xx)
-npm publish --access=publish
+npm publish --access=public
 ```
 
 ## workspaces
