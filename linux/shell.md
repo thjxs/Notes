@@ -177,3 +177,9 @@ test -d node_modules || yarn
 # create directory
 test -d tmp || mkdir tmp
 ```
+
+## Read password from standard input
+
+```sh
+echo password | sudo -S [command]
+```
