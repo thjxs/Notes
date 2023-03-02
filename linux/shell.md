@@ -183,3 +183,9 @@ test -d tmp || mkdir tmp
 ```sh
 echo password | sudo -S [command]
 ```
+
+## No hand up
+
+```sh
+nohup comand > info.log 2>&1 &
+```
