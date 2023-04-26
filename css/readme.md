@@ -1,7 +1,6 @@
 # Category
 
 * [animation](animation)
-* [autoprefixer](autoprefixer)
 * [background](background)
 * [border](border)
 * [filter](filter)
