@@ -72,3 +72,15 @@ git log --diff-filter=D --summary | grep delete
 ```sh
 git log --all <FILEPATH>
 ```
+
+## patch
+
+```sh
+git format-patch -1 [commit]
+
+# 测试
+git apply --check foo.patch
+
+# 应用
+git apply foo.patch
+```
