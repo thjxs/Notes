@@ -1,12 +1,20 @@
 # Hooks
 
+[Built-in React Hooks – React](https://react.dev/reference/react)
+
+## State Hooks
 [useState](#useState)
-[useEffect](#useEffect)
-[useContext](#useContext)
 [useReducer](#useReducer)
+## Context Hooks
+[useContext](#useContext)
+## Ref Hooks
+[useRef](#useRef)
+## Effect Hooks
+[useEffect](#useEffect)
+## Performance Hooks
 [useCallback](#useCallback)
 [useMemo](#useMemo)
-[useRef](#useRef)
+## Other Hooks
 [useImperativeHandle](#useImperativeHandle)
 [useLayoutEffect](#useLayoutEffect)
 [useDebugValue](#useDebugValue)
@@ -119,9 +127,46 @@ function Counter() {
 ```
 
 ## useCallback
+Lets you cache a function definition before passing it down to an optimized component.
 Returns a memoized callback.
 ```js
 const memoizedCallback = useCallback(() => doSomething(a, b), [a,b])
+```
+
+Example
+```jsx
+import { memo, useCallback, useRef, useState } from "react";
+
+interface FormProps {
+  onSubmit: () => void
+}
+function Form(props: FormProps) {
+  const {onSubmit} = props
+  const count = useRef(0)
+  console.log('render count', count.current += 1);
+  return (
+    <div>foo</div>
+  )
+}
+
+const MemoForm = memo(Form)
+
+function App() {
+  const [count, setCount] = useState(0)
+
+
+  const memoCallback = useCallback(() => console.log('submit'), []);
+
+
+  return (
+    <div>
+      <MemoForm onSubmit={memoCallback} />
+      <button onClick={() => setCount(count +1)}>click</button>
+    </div>
+  )
+}
+
+export default App
 ```
 
 ## useMemo
