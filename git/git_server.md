@@ -3,6 +3,8 @@
 1. SSH 公钥 [link](https://help.github.com/articles/generating-ssh-keys)
 
     ```bash
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    # legacy
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
 
