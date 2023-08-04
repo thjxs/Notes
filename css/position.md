@@ -17,3 +17,17 @@ The offset does not affect he position of any other elements.
 position: sticky;
 top: 20px;
 ```
+
+## 设置定位元素的偏移
+
+常用的属性有 `top, left right, bottom`
+此外还可以使用简写属性 `inset`
+
+## 设置遮罩
+
+```css
+.overlay {
+  position: fixed;
+  inset: 0
+}
+```
