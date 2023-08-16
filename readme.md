@@ -16,7 +16,6 @@ A major part of software engineering is building components that not only have w
 - [Dan Abramov](https://overreacted.io/)
 - [Martin Fowler](https://martinfowler.com/)
 - [张鑫旭](https://www.zhangxinxu.com/)
-- [ttys3](https://ttys3.dev/archive/)
 
 ## DOC
 
