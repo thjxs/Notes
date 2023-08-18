@@ -13,4 +13,6 @@
 
 [credential]
     helper = store
+[core]
+	excludesfile = ~/.gitignore
 ```
