@@ -84,3 +84,14 @@ git apply --check foo.patch
 # 应用
 git apply foo.patch
 ```
+
+## list merged branch
+
+> 只能检查分支是否已合并，无法区分是合并还是重置。
+
+```shell
+git branch --merged
+
+# 未合并的
+git branch --no-merged
+```
