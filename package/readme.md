@@ -1,9 +1,9 @@
 # JavaScript package
 
-## Taobao
+## npm mirror
 
 ```text
-https://registry.npm.taobao.org
+https://registry.npmmirror.com
 ```
 
 ## Check registry
@@ -21,7 +21,7 @@ yarn config set registry url
 
 ## Per package config
 
-`yarn config set electron_mirror https://npm.taobao.org/mirrors/electron/`
+`yarn config set electron_mirror https://npmmirror.com/mirrors/electron/`
 
 ## Check error
 
