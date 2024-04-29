@@ -9,14 +9,6 @@ global .gitignore
 git config --global core.excludesfile /path/to/.gitignore_global
 ```
 
-## diff
-
-对比两次提交的差异
-
-```text
-git diff <commit> <commit> [--] [<path>]
-```
-
 ## [git 钩子](git_hooks)
 
 ## [git server](git_server)

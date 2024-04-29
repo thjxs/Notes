@@ -1,5 +1,17 @@
 # Tips
 
+## diff
+对比两次提交的差异
+```text
+git diff <commit> <commit> [--] [<path>]
+
+# 比较两个提交
+git diff commit1 commit2
+
+# 比较两个提交中某个文件的差异
+git diff commit1 commit2 -- path/to/file
+```
+
 ## branch
 
 ```sh
