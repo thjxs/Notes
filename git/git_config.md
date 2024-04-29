@@ -16,3 +16,12 @@
 [core]
 	excludesfile = ~/.gitignore
 ```
+
+```text
+# ~/work/.gitconfig
+[core]
+sshCommand = ssh -i /path/to/workUser/key/file
+[user]
+    name = workUser
+    email = workEmail
+```
