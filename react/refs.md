@@ -1,6 +1,6 @@
 # Refs
 
-Refs provide a way to access DOM nodes or React elements created in the render method
+通过ref直接访问React生成的DOM节点
 
 ## use cases
 
@@ -10,16 +10,44 @@ Refs provide a way to access DOM nodes or React elements created in the render m
 
 ## creating refs
 
-```js
-class MyComponent extends React.Component {
-    constructor(props) {
-        super(props)
-        this.myRef = React.createRef();
-    }
+```jsx
+import {useRef} from 'react'
 
-    render() {
-        return <div ref={this.myRef} />
-    }
+function Foo() {
+  const myRef = useRef(null)
+
+  myRef.current.scrollIntoView()
+
+  return (
+    <div ref={myRef}></div>
+  )
+}
+
+```
+
+## Accessing component's DOM nodes
+
+```jsx
+const MyInput = forwardRef((props, ref) => {
+  return (
+    <>
+      <label>{props.label}</label>
+      <input {...props} ref={ref} />
+    </>
+  );
+});
+
+function MyForm() {
+  const inputRef = useRef(null);
+  function handleClick() {
+    inputRef.current.focus();
+  }
+  return (
+    <>
+      <MyInput label="name" ref={inputRef} />
+      <button onClick={handleClick}>focus the input</button>
+    </>
+  );
 }
 ```
 
