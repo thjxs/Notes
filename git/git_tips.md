@@ -1,7 +1,9 @@
 # Tips
 
 ## diff
+
 对比两次提交的差异
+
 ```text
 git diff <commit> <commit> [--] [<path>]
 
@@ -16,6 +18,9 @@ git diff commit1 commit2 -- path/to/file
 
 ```sh
 git rev-parse --abbrev-ref HEAD
+
+# 显示未合并到当前分支的分支
+git branch --no-merged
 ```
 
 ## delete branch
